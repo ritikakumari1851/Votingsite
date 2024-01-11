@@ -16,8 +16,8 @@ export default function Navbar() {
   return (
     <nav className='border-b-1 flex flex-row justify-between p-1 font-serif shadow-lg pl-'>
       <div className='flex flex-row gap-2 items-center font-extrabold ml-4'>
-        <img src='..\src\assets\Iconarchive-Blue-Election-Election-Vote-2.1024.png' className='w-10 h-10 shadow-2xl animate-pulse' alt='Logo' />
-        <p className=' text-base text-blue-900 font-serif'>
+        <img src='..\src\assets\vote-icon-png-12.jpg' className='w-10 h-10' alt='Logo' />
+        <p className=' text-base text-black font-serif'>
          ON CLICK
         </p>
       </div>

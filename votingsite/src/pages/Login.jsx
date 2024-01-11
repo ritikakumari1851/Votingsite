@@ -8,7 +8,7 @@ export default function Login() {
         <div className=''>
         <img  className=' w-screen mt-8' src="..\src\assets\elections-concept-group-people-voting-putting-ballot-papers-ballot-box-democracy_687327-377.avif" alt="" />
         </div>
-        <div className=' w-dvw '>
+        <form className=' w-dvw '>
           <div className=' border m-16 p-6 rounded-lg shadow-2xl '>
             <img src='..\src\assets\vote.png' alt='' className=' size-40 ml-36 -mt-6'/>
             <p className=' text-center font-serif text-2xl mb-4 -mt-6 text-gray-400'>
@@ -31,7 +31,7 @@ export default function Login() {
           </p>
           </div>
       </div>
-        </div>
+        </form>
       </div>
       </div>
   )
