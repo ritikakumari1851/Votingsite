@@ -1,53 +1,201 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
-export default function Navbar() {
-  const [activeLink, setActiveLink] = useState('home');
-
-  const changeIndicator = (link) => {
-    setActiveLink(link);
-  };
-
-  const navItemClass = (link) =>
-    `hover:border-b-2 hover:border-blue-900 hover:border-r-0 hover:pb-1 hover:pr-0 pr-2 text-zinc-500 hover:text-xl hover:text-blue-900 ${
-      activeLink === link ? 'border-b-2 border-blue-900 pb-2 pr-0 text-xl text-green-900' : ''
-    }`;
-
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className='border-b-1 flex flex-row justify-between p-1 font-serif shadow-lg pl-'>
-      <div className='flex flex-row gap-2 items-center font-extrabold ml-4'>
-        <img src='..\src\assets\vote-icon-png-12.jpg' className='w-10 h-10' alt='Logo' />
-        <p className=' text-base text-black font-serif'>
-         ON CLICK
-        </p>
-      </div>
-      <div className='flex flex-row gap-4 items-center text-lg'>
-        <Link to={'/'} onClick={() => changeIndicator('home')} className='border-r pr-2'>
-          <p className={navItemClass('home')}>Home</p>
-        </Link>
-        <Link to={'/election'} onClick={() => changeIndicator('election')} className='border-r pr-2'>
-          <p className={navItemClass('election')}>Election</p>
-        </Link>
-        <Link to={'/pricing'} onClick={() => changeIndicator('pricing')} className='border-r pr-2'>
-          <p className={navItemClass('pricing')}>Pricing</p>
-        </Link>
-        <Link to={'/about'} onClick={() => changeIndicator('about')} className='border-r pr-2'>
-          <p className={navItemClass('about')}>About</p>
-        </Link>
-        <Link to={'/services'} onClick={() => changeIndicator('services')}>
-          <p className={navItemClass('services')}>Services</p>
-        </Link>
-      </div>
-      <div className='flex flex-row gap-4 items-center pr-4'>
-        <Link to={'/registration'}>
-          <button className='hover:bg-lime-950 border border-slate-950 p-3 bg-lime-900 text-gray-100 rounded-lg pr-5 pl-5'>
-            Get Started
-          </button>
-        </Link>
-        <Link to={'/Login'} onClick={() => changeIndicator('sign in')}>
-          <p className={navItemClass('sign in')}>Sign in</p>
-        </Link>
-      </div>
-    </nav>
+    <div>
+      <nav className=" bg-transparent-800 shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <img
+                  className="h-14 w-14"
+                  src="..\src\assets\stock-vector-vote-icon-comic-style-ballot-box-cartoon-vector-illustration-white.jpeg"
+                  alt=""
+                />
+              </div>
+              <h1 className=" text-center font-display font-bold text-xl text-orange-800">
+                OnClick
+              </h1>
+              <div className="hidden md:block">
+                <div className=" ml-[50vh] flex items-baseline gap-4 ">
+                <p
+                 
+                 className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+               >
+               <Link to={'/'}>
+              
+               Home
+                 </Link>
+                </p>
+                  
+                 <p
+                 
+                    className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+                  >
+                  <Link to={'Election'}>
+                 
+                    Election
+                    </Link>
+                   </p>
+                   
+                   
+
+                 <p
+                     
+                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+                  >
+                    <Link to={'Services'}>
+                    Services
+                    </Link>
+                   </p>
+
+                 <p
+                     
+                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+                  >
+                    <Link to={'About'}>
+                    About
+                    </Link>
+                   </p>
+
+                 <p
+                     
+                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md mr-[25vh]"
+                  >
+                    <Link to={'Pricing'}>
+                    Pricing
+                    </Link>
+                   </p>
+                   <Link to={'registration'}>
+                  <button className=" bg-blue-950 text-white rounded-md p-4 pl-5 pr-5 font-serif">
+                    Get started
+                  </button>
+                  </Link>
+                  <Link to={'Login'}>
+                  <p className=" font-serif text-blue-900 text-lg">
+                    Sign in
+                  </p>
+                  </Link>
+                  
+                </div>
+              </div>
+            </div>
+            <div className="-mr-2 flex md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-100 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden" id="mobile-menu">
+              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <p
+                   
+                   className="hover:bg-gray-700 text-gray-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                 >
+                   <Link to={'/'}>
+               Home
+                  </Link>
+                  </p>
+ 
+                 
+                 <p
+                   
+                  className="hover:bg-gray-700 text-gray-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  <Link to={'Election'}>
+                 Election
+                 </Link>
+                 </p>
+
+                 <p
+                   
+                  className="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  <Link to={'Services'}>
+                 Services
+                 </Link>
+                 </p>
+
+                 <p
+                   
+                  className="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                ><Link to={'Pricing'}>
+                  Pricing
+                  </Link>
+                 </p>
+
+              
+
+                 <p
+                   
+                  className="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  <Link to={'Login'}>
+                 Sign in
+                 </Link>
+                 </p>
+              </div>
+            </div>
+          )}
+        </Transition>
+      </nav>
+    </div>
   );
 }
+
+export default Navbar;

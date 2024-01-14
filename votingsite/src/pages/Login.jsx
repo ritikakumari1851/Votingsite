@@ -1,38 +1,54 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
 
-export default function Login() {
+const Login = () => {
   return (
-    <div>
-      <div className=' flex flex-row justify-evenly font-serif'>
-        <div className=''>
-        <img  className=' w-screen mt-8' src="..\src\assets\elections-concept-group-people-voting-putting-ballot-papers-ballot-box-democracy_687327-377.avif" alt="" />
-        </div>
-        <form className=' w-dvw '>
-          <div className=' border m-16 p-6 rounded-lg shadow-2xl '>
-            <img src='..\src\assets\vote.png' alt='' className=' size-40 ml-36 -mt-6'/>
-            <p className=' text-center font-serif text-2xl mb-4 -mt-6 text-gray-400'>
-               <i>Welcome User</i>
-            </p>
-            <div className=' flex flex-col '>
-          <input type='Email' placeholder='Email' className=' border-b p-2 mt-6'></input>
-          
-          <input type='Password' className=' mt-10 rounded p-2 border-b mb-6' placeholder='Password'></input>
-         
-          </div>
-         <div className=' flex flex-row gap-2 ml-2 text-gray-400'> <input type='checkbox' className=''></input><p>Remember me</p></div>
-          <button type='submit' className='text-gray-300 w-full bg-green-900 p-3 mt-6 rounded-lg hover:bg-green-950'>Submit</button>
-          <div className='  text-center mt-6'>
-          <p>
-            Trouble logging in? <u className=' text-blue-900'> Forgot password</u>
-          </p>
-          <p>
-            Don't have Account? <Link to='/registration'><u className=' text-blue-900'> Sign up</u></Link>
-          </p>
-          </div>
+    <div className="flex h-screen bg-gray-100">
+      <div className="flex w-1/2">
+        <img
+          src="..\src\assets\At the office-pana.png"
+          alt="Image"
+          className="w-full h-full object-cover"
+        />
       </div>
+      <div className="flex w-1/2 flex-col justify-center items-center">
+        <h1 className="text-4xl font-bold mb-8">Sign in to your account</h1>
+        <p className="mb-8">
+          Not a member?{" "}
+          <a href="signup.html" className="text-blue-500">
+            Start a 14 day free trial
+          </a>
+        </p>
+        <form className="w-1/2">
+          <input
+            type="text"
+            placeholder="Email address"
+            className="block w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="block w-full p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+          <button
+            type="submit"
+            className="block w-full p-2 mb-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          >
+            Sign in
+          </button>
         </form>
+    
+        <p className=" pb-2 flex text-blue-700">
+            <p className=" text-black pr-2">Trouble logging in? </p> Forgot password
+            </p>
+     
+        <p className=" flex text-blue-700">
+            <p className=" text-black pr-2">Don't have a Account? </p> Sign up
+       
+        </p>
+    
       </div>
-      </div>
-  )
-}
+    </div>
+  );
+};
+
+export default Login;
