@@ -8,6 +8,8 @@ import Pricing from './pages/Pricing'
 import Election from './pages/Election'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
+import { MyFooter } from './components/Footer'
+
 function App() {
   return (
     <>
@@ -21,6 +23,7 @@ function App() {
     <Route path='/Login' element={<Login/>}/>
     <Route path='/registration' element={<Registration/>}/>
     </Routes>
+   <MyFooter/>
     </>
   )
 }
