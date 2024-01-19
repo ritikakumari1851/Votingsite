@@ -11,7 +11,11 @@ export default {
       fontFamily:{
         display:["Dancing script","swap"],
         tempo:["Caveat","swap"]
+      },
+      animation: {
+        'bounce-slow': 'bounce 5s linear infinite',
       }
+      
     },
   },
   plugins: [

@@ -10,7 +10,13 @@ import Login from './pages/Login'
 import Registration from './pages/Registration'
 import { MyFooter } from './components/Footer'
 
+import { logEvent } from 'firebase/analytics';
+import { analytics } from './utils'
+
 function App() {
+  if(analytics){
+    logEvent(analytics, 'visited..')
+  }
   return (
     <>
     <Navbar/>

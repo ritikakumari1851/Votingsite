@@ -3,11 +3,12 @@
 
 import { Footer } from 'flowbite-react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import Button from './Button';
 
 export function MyFooter() {
   return (
     <Footer container>
-      <div className=" w-full border-2">
+      <div className=" w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 mt-10">
           <div>
             <Footer.Brand
@@ -28,7 +29,8 @@ export function MyFooter() {
             <div>
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Github</Footer.Link>
+              
+                {/* <Footer.Link href="#">Github</Footer.Link> */}
                 <Footer.Link href="#">Discord</Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -48,7 +50,8 @@ export function MyFooter() {
             <Footer.Icon href="#" icon={BsFacebook} />
             <Footer.Icon href="#" icon={BsInstagram} />
             <Footer.Icon href="#" icon={BsTwitter} />
-            <Footer.Icon href="#" icon={BsGithub} />
+            <Button/>
+            {/* <Footer.Icon href="#" icon={BsGithub} /> */}
             <Footer.Icon href="#" icon={BsDribbble} />
           </div>
         </div>

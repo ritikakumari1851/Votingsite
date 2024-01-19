@@ -11,9 +11,9 @@ export default function Election() {
       <img className=' w-[90vh]' src='..\src\assets\At the office-pana.png'></img>
       </div>
       <div className=' flex flex-row gap-5 justify-between'>
-      <button className=' ml-32  bg-orange-800 w-40 h-16 rounded-md hover:bg-orange-950 text-gray-200 text-2xl font-semibold shadow-gray-900 shadow-2xl'>Voter</button>
-      <button className=' bg-gray-800 w-52 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-xl font-semibold shadow-gray-900 shadow-2xl '>Administrator</button>
-      <button className=' mr-32  bg-orange-800 w-40 h-16 rounded-md hover:bg-orange-950 text-gray-200 text-xl font-semibold shadow-gray-900 shadow-2xl'>Results</button>
+      <button className=' ml-32 animate-bounce-slow  bg-gray-800 w-40 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-2xl font-semibold shadow-gray-900 shadow-2xl'>Voter</button>
+      <button className=' bg-gray-800 animate-bounce-slow w-52 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-xl font-semibold shadow-gray-900 shadow-2xl '>Administrator</button>
+      <button className=' mr-32  animate-bounce-slow bg-gray-800 w-40 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-xl font-semibold shadow-gray-900 shadow-2xl'>Results</button>
       </div>
       <div className=' flex flex-row justify-between ml-20 mr-20'>
         <Card/>

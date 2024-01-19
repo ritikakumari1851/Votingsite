@@ -11,7 +11,7 @@ export default function Home() {
           <p className=' text-lg text-gray-400'>Vote onclick guarantees election integrity, boosts voter engagement and saves serious hours. It's free to test and free for up to 20 voters. Easy and practical for all & Documentation is also available to know how to use.
           </p>
           <div className=' flex flex-row items-center gap-28'>
-          <button className=' bg-gray-900 p-4 pl-8 pr-8 font-serif text-xl text-white rounded-md mt-10'> Start Now</button>
+          <button className=' animate-bounce-slow bg-gray-900 p-4 pl-8 pr-8 font-serif text-xl text-white rounded-md mt-10'> Start Now</button>
           <p className=' mt-[5vh] font-sans font-semibold text-blue-900 text-lg'><u>Explore Services</u></p>
           </div></div>
        

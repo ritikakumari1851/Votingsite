@@ -6,7 +6,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <nav className=" bg-transparent-800 shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
+      <nav className=" bg-white shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -24,7 +24,7 @@ function Navbar() {
                 <div className=" ml-[50vh] flex items-baseline gap-4 ">
                 <p
                  
-                 className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+                 className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r"
                >
                <Link to={'/'}>
               
@@ -34,7 +34,7 @@ function Navbar() {
                   
                  <p
                  
-                    className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+                    className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r"
                   >
                   <Link to={'Election'}>
                  
@@ -46,7 +46,7 @@ function Navbar() {
 
                  <p
                      
-                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r"
                   >
                     <Link to={'Services'}>
                     Services
@@ -55,7 +55,7 @@ function Navbar() {
 
                  <p
                      
-                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md border-r"
+                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r"
                   >
                     <Link to={'About'}>
                     About
@@ -64,7 +64,7 @@ function Navbar() {
 
                  <p
                      
-                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-400 font-serif   text-md mr-[25vh]"
+                    className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md mr-[25vh]"
                   >
                     <Link to={'Pricing'}>
                     Pricing
