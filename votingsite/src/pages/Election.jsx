@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../components/Card'
-
+import Image from "../assets/At the office-pana.png"
 export default function Election() {
   return (
     <div>
@@ -8,7 +8,7 @@ export default function Election() {
 
       <h1 className=' mt-[30vh] ml-[10vh] font-bold'>
         <p className=' text-4xl mb-6 text-orange-700 font-thin'>Choose Professional &</p>CHOOSE YOUR ACTION<br></br><p className=' text-4xl font-serif text-orange-700 mt-10 font-thin'>Let Your voice be heard </p></h1>
-      <img className=' w-[90vh]' src='..\src\assets\At the office-pana.png'></img>
+      <img className=' w-[90vh]' src={Image}></img>
       </div>
       <div className=' flex flex-row gap-5 justify-between'>
       <button className=' ml-32 animate-bounce-slow  bg-gray-800 w-40 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-2xl font-semibold shadow-gray-900 shadow-2xl'>Voter</button>
