@@ -5,7 +5,7 @@ import Card from '../components/Card';
 import img1 from '../assets/Good team-pana.png'
 export default function Home() {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center mt-14'>
       <div className='flex flex-col md:flex-row items-center mt-10 md:mt-20'>
         <div className='md:w-full px-4 md:px-10'>
           <p className='text-2xl mb-5 font-sans font-medium text-orange-600'>
