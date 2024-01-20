@@ -2,7 +2,7 @@
 import React from 'react';
 import Slider from '../components/Slider';
 import Card from '../components/Card';
-
+import img1 from '../assets/Good team-pana.png'
 export default function Home() {
   return (
     <div className='flex flex-col items-center'>
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
         <div className='md:w-full mt-6 md:mt-0'>
           <img
-            src='../src/assets/Good team-pana.png'
+            src={img1}
             className='w-full md:float-right'
             alt='Good Team'
           />
