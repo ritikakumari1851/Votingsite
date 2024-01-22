@@ -4,7 +4,7 @@ import img1 from '../assets/price.jpg';
 
 export default function Pricing() {
   return (
-    <div className='bg-white'>
+    <div className='bg-white mt-10'>
       <div className='flex flex-col md:flex-row justify-between m-5 md:m-20'>
         <div className='md:w-1/2'>
           <img src={img1} className='w-full md:pt-20' alt="Price" />

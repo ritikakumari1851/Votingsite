@@ -3,8 +3,14 @@
 import { Footer } from 'flowbite-react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 // import Button from './Button';
+import {useLocation} from "react-router-dom"
 import img1 from '../assets/vote.png'
 export function MyFooter() {
+  const location =useLocation();
+  if (location.pathname === '/Login' || location.pathname === '/registration' || location.pathname === '/Reset') {
+   return null;
+  } 
+  
   return (
     <Footer container className=' rounded-none shadow-2xl'>
       <div className="w-full">

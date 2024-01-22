@@ -8,15 +8,22 @@ import Election from './pages/Election'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
 import { MyFooter } from './components/Footer'
-
 import { logEvent } from 'firebase/analytics';
 import { analytics } from './utils'
 import Contact from './pages/Contact'
-
+import Reset from './pages/Reset'
+import { useEffect, useState } from 'react'
 function App() {
   if(analytics){
     logEvent(analytics, 'visited..')
   }
+  const [loggedIn,setisLoggedin]=useState(false)
+  useEffect(()=>{
+  const token =localStorage.getItem("userToken")
+  if(token){
+    setisLoggedin(true)
+  }
+  },[])
   return (
     <>
     <Navbar/>
@@ -28,6 +35,8 @@ function App() {
     <Route path='/election' element={<Election/>}/>
     <Route path='/Login' element={<Login/>}/>
     <Route path='/registration' element={<Registration/>}/>
+    <Route path='/reset' element={<Reset/>}/>
+    { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
     </Routes>
    <MyFooter/>
     </>

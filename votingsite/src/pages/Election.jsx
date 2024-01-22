@@ -4,7 +4,7 @@ import Image from '../assets/At the office-pana.png';
 
 export default function Election() {
   return (
-    <div>
+    <div className=' mt-10'>
       <div className='text-7xl flex flex-col md:flex-row md:justify-between'>
         <h1 className='mt-8 md:mt-[30vh] text-center md:text-left font-bold md:ml-[10vh]'>
           <p className='text-4xl mb-6 text-orange-700 font-thin'>

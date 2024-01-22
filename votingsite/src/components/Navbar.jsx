@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import img from "../assets/stock-vector-vote-icon-comic-style-ballot-box-cartoon-vector-illustration-white.jpeg";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location =useLocation();
+  if (location.pathname === '/Login' || location.pathname === '/registration' || location.pathname === '/Reset' ) {
+   return null;
+  } 
   return (
     <div>
-      <nav className=" bg-white shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
+      <nav className="bg-white shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
