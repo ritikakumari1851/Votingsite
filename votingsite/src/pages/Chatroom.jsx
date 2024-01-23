@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
 export default function Chatroom() {
-  const [message, setMessage] = useState("");
-  const [room, setRoom] = useState("");
+  const [message, setMessage] = useState();
+  const [room, setRoom] = useState();
   const [messages, setMessages] = useState([]);
   const [isJoined, setIsJoined] = useState(false);
 
