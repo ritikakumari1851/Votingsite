@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
-export default function Chat() {
-  const [message, setMessage] = useState();
-  const [room, setRoom] = useState();
+
+export default function Chatroom() {
+  const [message, setMessage] = useState("");
+  const [room, setRoom] = useState("");
   const [messages, setMessages] = useState([]);
   const [isJoined, setIsJoined] = useState(false);
 
   const socket = io("https://votingsitebackend.onrender.com/", {
     transports: ["websocket"],
   });
+
+  useEffect(() => {
+    // Cleanup function to handle socket disconnection
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
+
   useEffect(() => {
     socket.on("joined", () => {
       setIsJoined(true);
@@ -16,17 +25,24 @@ export default function Chat() {
     socket.on("message", (msg) => {
       setMessages((prev) => [...prev, msg]);
     });
-  }, [room]);
+  }, [room, socket]); // Include 'room' and 'socket' in the dependency array
 
   function send() {
-    socket.emit("message", message, room);
+    if (message.trim() !== "") {
+      socket.emit("message", message, room);
+      setMessage(""); // Clear the message input after sending
+    }
   }
+
   function join() {
-    socket.emit("join", room);
+    if (room.trim() !== "") {
+      socket.emit("join", room);
+    }
   }
 
   return (
-    <div>
+    <div className=" mt-32">
+        
       {!isJoined ? (
         <div>
           <input
@@ -55,3 +71,4 @@ export default function Chat() {
     </div>
   );
 }
+

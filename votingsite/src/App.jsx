@@ -14,7 +14,9 @@ import Contact from './pages/Contact'
 import Reset from './pages/Reset'
 import { useEffect, useState } from 'react'
 import Dashboard from './pages/Dashboard'
-import Chat from './pages/chat'
+import Chatroom from './pages/Chatroom'
+
+
 function App() {
   if(analytics){
     logEvent(analytics, 'visited..')
@@ -38,7 +40,7 @@ function App() {
     <Route path='/Login' element={<Login/>}/>
     <Route path='/registration' element={<Registration/>}/>
     <Route path='/reset' element={<Reset/>}/>
-    <Route path='/chat' element={<Chat/>}/>
+    <Route path='/chat' element={<Chatroom/>}/>
     { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
     </Routes>
    <MyFooter/>
