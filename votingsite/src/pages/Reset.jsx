@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Reset() {
   return (
-    <div>
+    <div className='mt-20'>
       <section>
   <div class="relative items-center w-full px-5 py-12 mx-auto mt-20 md:px-12 lg:px-20 max-w-7xl">
     <div class="w-full max-w-md mx-auto md:max-w-sm md:px-0 md:w-96 sm:px-4">

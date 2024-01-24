@@ -8,7 +8,7 @@ export default function Login() {
   function handlelogin (e){
     e.preventDefault();
     const body={email,password}
-    fetch("http://localhost:3000/login",{
+    fetch("https://votingsitebackend.onrender.com",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -154,7 +154,7 @@ export default function Login() {
             <div className="text-right mb-4">
               <p
                 className="text-s mb-5 font-semibold text-gray-500 hover:text-gray-400 cursor-pointer"
-                ><Link to={"/reset"}>
+                ><Link to={"/forgotpas"}>
               
                 Forgot Password?
                 </Link>

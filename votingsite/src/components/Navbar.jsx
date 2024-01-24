@@ -1,22 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link, useLocation } from "react-router-dom";
 import img from "../assets/stock-vector-vote-icon-comic-style-ballot-box-cartoon-vector-illustration-white.jpeg";
+import { MyContext } from "../Helpers/Context";
 function Navbar() {
+  const {userToken,setuserToken} = useContext(MyContext)
+  console.log(userToken)
   const [isOpen, setIsOpen] = useState(false);
   const location =useLocation();
-  if (location.pathname === '/Login' || location.pathname === '/registration' || location.pathname === '/Reset' ) {
+  if (location.pathname === '/Login' || location.pathname === '/registration' || location.pathname === '/Reset' || location.pathname === '/forgotpas' || location.pathname === '/dashboard' ) {
    return null;
   } 
   return (
     <div>
-      <nav className="bg-white shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
+      <nav className="bg-transaprent shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img
-                  className="h-14 w-14"
+                  className="h-14 w-14 rounded-full mr-3"
                   src={img}
                   alt=""
                 />

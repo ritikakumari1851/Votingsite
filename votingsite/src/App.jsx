@@ -15,6 +15,7 @@ import Reset from './pages/Reset'
 import { useEffect, useState } from 'react'
 import Dashboard from './pages/Dashboard'
 import Chatroom from './pages/Chatroom'
+import Forgotpas from './pages/Forgotpas'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
     <Route path='/registration' element={<Registration/>}/>
     <Route path='/reset' element={<Reset/>}/>
     <Route path='/chat' element={<Chatroom/>}/>
+    <Route path='/forgotpas' element={<Forgotpas/>}/>
     { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
     </Routes>
    <MyFooter/>

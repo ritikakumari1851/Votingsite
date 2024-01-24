@@ -3,9 +3,10 @@ import React from 'react';
 import Slider from '../components/Slider';
 import Card from '../components/Card';
 import img1 from '../assets/Good team-pana.png'
+import img2 from '../assets/young-women-advertising-vote-online-election-white-background-vector.jpg'
 export default function Home() {
   return (
-    <div className='flex flex-col items-center mt-14'>
+    <div className='flex flex-col items-center mt-8'>
       <div className='flex flex-col md:flex-row items-center mt-10 md:mt-20'>
         <div className='md:w-full px-4 md:px-10'>
           <p className='text-2xl mb-5 font-sans font-medium text-orange-600'>
@@ -52,9 +53,9 @@ export default function Home() {
         distinctio, tempora sed magnam magni perspiciatis minima numquam atque
         quasi maxime?
       </p>
-      <div className='flex flex-wrap gap-3 mt-12 border-t justify-between'>
-        <div className='w-full sm:w-1/3 md:w-1/5 p-2'>
-          <Card title={'Voting'} image={''} />
+      <div className='flex flex-wrap gap-3 mt-12 border-t justify-between px-44'>
+        <div className='w-full sm:w-1/3 md:w-1/5'>
+          <Card title={'Voting'} />
         </div>
         <div className='w-full sm:w-1/3 md:w-1/5 p-2'>
           <Card title={'Voting Ad'} />
@@ -80,7 +81,7 @@ export default function Home() {
  
     
       </div>
-      <div className='flex flex-col md:flex-row justify-between h-screen w-full border bg-black p-4 md:p-10'>
+      <div className='flex flex-col md:flex-row justify-between h-screen w-full border bg-gray-500 md:p-10'>
         <div className='text-white md:w-full mb-4 md:mb-0'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, dolores
           repellat molestiae, placeat molestias, dolore quisquam id
