@@ -8,53 +8,24 @@ export default function Login() {
   function handlelogin (e){
     e.preventDefault();
     const body={email,password}
-    // fetch("https://votingsitebackend.onrender.com",{
-    //   method:"POST",
-    //   headers:{
-    //     "Content-Type":"application/json"
-    //   },
-    //   body:JSON.stringify(body)
-    // }).then(response =>{
-    //   if(response.status==200){
-    //      response.json().then(json=>{
-    //       console.log(json.token)
-    //       localStorage.setItem("userToken",json.token)
-    //       alert("Login sucessful")
-    //       navigation("/dashboard")
-    //      })
-        
-    //   } 
-    //   else{
-    //     alert("Response was not sucessful")
-    //     response.json().then(json=>{
-    //       alert(json.message)
-    //     })
-    //   }
-    // })
-     
-    //   .catch(error => alert(error))
-    // ... Your existing code ...
-
-fetch("https://votingsitebackend.onrender.com", {
+fetch("http://localhost:3000/login", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
   body: JSON.stringify(body),
 })
-  .then(response => {
+  .then(async response => {
     if (response.ok) {
-      return response.json().then(json => {
-        console.log(json.token);
-        localStorage.setItem("userToken", json.token);
-        alert("Login successful");
-        navigation("/dashboard");
-      });
+      const json = await response.json();
+      console.log(json.token);
+      localStorage.setItem("userToken", json.token);
+      alert("Login successful");
+      navigation("/dashboard");
     } else {
       // Handle non-JSON responses here
-      return response.text().then(text => {
-        alert(`Response was not successful: ${text}`);
-      });
+      const text = await response.text();
+      alert(`Response was not successful: ${text}`);
     }
   })
   .catch(error => alert(error));
@@ -158,9 +129,9 @@ fetch("https://votingsitebackend.onrender.com", {
               </label>
               <input
                 className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-gray-700 text-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500"
-                type="text"
+                type="email"
                 id="login"
-                value={email} required onChange={(e) =>setemail(e.target.value)}
+                 required onChange={(e) =>setemail(e.target.value)}
 
               />
               <label

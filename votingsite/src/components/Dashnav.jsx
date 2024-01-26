@@ -3,7 +3,13 @@ import img from '../assets/stock-vector-vote-icon-comic-style-ballot-box-cartoon
 import Dropdown from './Dropdown'
 export default function Dashnav() {
   return (
-    <div className=' flex flex-row justify-between'>
+    <div className=' flex flex-col justify-between'>
+      <div>
+          <div className=' bg-blue-900 bg-opacity-70 pb-4 flex flex-row justify-between'>
+            <p>Hello</p>
+   <div><Dropdown/></div>
+    </div>
+    </div>
     <div className=' flex flex-col bg-blue-900 py-5  h-screen text-xl text-gray-400 w-[35vh] shadow-2xl'>
         <div className=' flex flex-row items-center mb-5 pl-4 border-b pb-4 border-gray-400'>
         <img src={img} className=' w-10 h-10 rounded-full mr-2'/>
@@ -22,9 +28,7 @@ export default function Dashnav() {
             </div>
         </div>
     </div>
-    <div className='mr-6'>
-    <Dropdown/>
-    </div>
+
     </div>
   )
 }
