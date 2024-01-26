@@ -55,13 +55,15 @@ export default function Home() {
       </p>
       <div className='flex flex-wrap gap-3 mt-12 border-t justify-between px-44'>
         <div className='w-full sm:w-1/3 md:w-1/5'>
-          <Card title={'Voting'} />
+        
+          <Card title={'Voting'}  />
+         
         </div>
         <div className='w-full sm:w-1/3 md:w-1/5 p-2'>
           <Card title={'Voting Ad'} />
         </div>
         <div className=' w-full sm:w-1/3 md:w-1/5 p-2'>
-          <Card title={"voting"}/>
+          <Card title={"voting"} />
         </div>
         <div className=' w-full sm:w-1/3 md:w-1/5 p-2'>
           <Card title={"voting"}/>
@@ -82,27 +84,106 @@ export default function Home() {
     
       </div>
       <div className='flex flex-col md:flex-row justify-between h-screen w-full border bg-gray-500 md:p-10'>
+      <div className=' flex flex-col'>
+        <div className=' text-4xl text-black p-5'>  Election Excellence </div>
         <div className='text-white md:w-full mb-4 md:mb-0'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, dolores
-          repellat molestiae, placeat molestias, dolore quisquam id
-          exercitationem iusto earum ut ipsam eum est soluta facilis
+      
+ElectionBuddy is easy for voters to cast ballots,
+ with the convenience of voting from their home, by mail or on-site.
           <br />
           <br />
-          Ex earum nobis iure.
-        </div>
+          
+          </div>
+          </div>
+        <div className=' flex flex-col'>
+        
+        <div className=' text-4xl text-black md:w-full p-5'> Marvelous Meetings</div>
         <div className='text-white md:w-full'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, dolores
-          repellat molestiae, placeat molestias, dolore quisquam id
-          exercitationem iusto earum ut ipsam eum est soluta facilis
+       
+ElectionBuddy easily runs all your votes for in-person meetings, videoconferences and hybrid meetings too.
           <br />
           <br />
-          Ex earum nobis iure.
+          </div>
         </div>
+      
       </div>
       <p className='text-4xl mt-10 text-center'>
         Take Your Vote To the Next Level with Us
       </p>
-    </div>
+      <div className='flex flex-col md:flex-row justify-between h-80 w-full border bg-white md:p-10'>
+      <div className=' flex flex-col'>
+        <div className=' text-4xl text-black  p-5'> Boost Engagement </div>
+        <div className=' text-gray-500 md:w-full  '> 
+        Notify voters using email, mail, text message or<br/> with your own systems.
+         Receive undeliverable notice alerts and send reminders. Voters vote by phone, computer, mail or in person.
+          <br />
+          <br />
+          <br/>
+          </div>
+          </div>
+
+          <div className=' flex flex-col'>
+        <div className=' text-4xl text-black md:w-full p-5'>  High-integrity Voting </div>
+        <div className=' text-gray-500 md:w-full  '>
+      
+        Voters can only vote once and voting choices remain anonymous. Each ballot has one, secure voting key and the vote is auditable, verifiable and can be independently observed.
+          <br />
+          <br />
+          
+          </div>
+          </div>
+        <div className=' flex flex-col'>
+        
+        <div className=' text-4xl text-black md:w-full p-5'> Flexible Ballots</div>
+        <div className=' text-gray-500 md:w-full'>
+       
+        Vote on executive officers, board positions, contract ratifications, bylaw amendments, budget approvals, acclamations and motions. Or run polls and surveys.
+          <br />
+          <br />
+          </div>
+          </div>
+      
+      </div>
+      <div className='flex flex-col md:flex-row justify-between h-80 w-full border bg-white md:p-10'>
+      <div className=' flex flex-col'>
+        <div className=' text-4xl text-black  p-5'> Automated and Simple </div>
+        <div className=' text-gray-500 md:w-full  '> 
+        Setup your Election or Meeting Votes in 3 steps - spend ur time monitoring, not counting. Or engage our experts for dedicated assistance or independent election oversight.
+          <br />
+          <br />
+          <br/>
+          </div>
+          </div>
+
+          <div className=' flex flex-col'>
+        <div className=' text-4xl text-black md:w-full p-5'>  Real-time Results </div>
+        <div className=' text-gray-500 md:w-full  '>
+      
+        
+Winners are immediately calculated using first past the post, cumulative voting, preferential ballot, STV Single transferable vote or approval voting. You can tabulate results yourself too!
+
+          <br />
+          <br />
+          
+          </div>
+          </div>
+        <div className=' flex flex-col'>
+        
+        <div className=' text-4xl text-black md:w-full p-5'> 
+        Secure and Private</div>
+        <div className=' text-gray-500 md:w-full'>
+       
+256-bit encryption used to safeguard your vote — the same security as major banks. And we don’t share or use voter data — your elections stay private.
+          <br />
+          <br />
+          </div>
+        </div>
+      </div>
+     
+     </div>
+  
+
+ 
   );
 }
 

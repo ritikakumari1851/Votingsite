@@ -6,7 +6,7 @@ export default function Registration() {
   const [email, setemail]=useState()
   const [username, setusername]=useState()
   const [Dob,setDob] =useState()
-  const [gender, setgender] =useState()
+  const [gender, setGender] =useState()
   const [password, setpassword] =useState()
   
 function handleRegister (e){
@@ -122,7 +122,7 @@ function handleRegister (e){
             <select
               class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-gray-800 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
               id="gender"
-              onChange={(e) =>setFirst_name(e.target.value)} 
+              onChange={(e) =>setGender(e.target.value)} 
             >
               <option value="male">Male</option>
               <option value="female">Female</option>
