@@ -8,32 +8,57 @@ export default function Login() {
   function handlelogin (e){
     e.preventDefault();
     const body={email,password}
-    fetch("https://votingsitebackend.onrender.com",{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify(body)
-    }).then(response =>{
-      if(response.status==200){
-         response.json().then(json=>{
-          console.log(json.token)
-          localStorage.setItem("userToken",json.token)
-          alert("Login sucessful")
-          navigation("/dashboard")
-         })
+    // fetch("https://votingsitebackend.onrender.com",{
+    //   method:"POST",
+    //   headers:{
+    //     "Content-Type":"application/json"
+    //   },
+    //   body:JSON.stringify(body)
+    // }).then(response =>{
+    //   if(response.status==200){
+    //      response.json().then(json=>{
+    //       console.log(json.token)
+    //       localStorage.setItem("userToken",json.token)
+    //       alert("Login sucessful")
+    //       navigation("/dashboard")
+    //      })
         
-      } 
-      else{
-        alert("Response was not sucessful")
-        response.json().then(json=>{
-          alert(json.message)
-        })
-      }
-    })
+    //   } 
+    //   else{
+    //     alert("Response was not sucessful")
+    //     response.json().then(json=>{
+    //       alert(json.message)
+    //     })
+    //   }
+    // })
      
-      .catch(error => alert(error))
-    
+    //   .catch(error => alert(error))
+    // ... Your existing code ...
+
+fetch("https://votingsitebackend.onrender.com", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(body),
+})
+  .then(response => {
+    if (response.ok) {
+      return response.json().then(json => {
+        console.log(json.token);
+        localStorage.setItem("userToken", json.token);
+        alert("Login successful");
+        navigation("/dashboard");
+      });
+    } else {
+      // Handle non-JSON responses here
+      return response.text().then(text => {
+        alert(`Response was not successful: ${text}`);
+      });
+    }
+  })
+  .catch(error => alert(error));
+
   }
   return (
     <form onSubmit={handlelogin}>
