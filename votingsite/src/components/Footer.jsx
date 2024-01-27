@@ -7,7 +7,7 @@ import {useLocation} from "react-router-dom"
 import img1 from '../assets/vote.png'
 export function MyFooter() {
   const location =useLocation();
-  if (location.pathname === '/Login' || location.pathname === '/registration' || location.pathname === '/Reset' || location.pathname === '/Contact' || location.pathname === '/forgotpas' || location.pathname === '/dashboard' ) {
+  if (location.pathname === '/Login' || location.pathname === '/voiting' || location.pathname === '/registration' || location.pathname === '/Ballot' || location.pathname === '/Reset' || location.pathname === '/Contact' || location.pathname === '/forgotpas' || location.pathname === '/dashboard' ) {
    return null;
   } 
   
