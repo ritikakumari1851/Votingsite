@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div className=' pt-32 flex justify-center bg-gray-900 p-20'>
+    <div className=' pt-32 flex justify-between flex-row bg-gray-900 p-20'>
       <div class="form-container">
       <form class="form">
         <p className=' text-3xl font-bold text-gray-200'>Got Problem? We will Reach You!</p>
