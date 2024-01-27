@@ -35,27 +35,46 @@ export default function Election() {
         <Card />
       </div>
       <hr className='my-8 md:my-[10vh]' />
-      <div>
+     <div>
         <p className='text-5xl flex justify-center font-semibold'>
           We Provide Two methods for Election
         </p>
-
+        </div>
         <div className='flex flex-col md:flex-row justify-between h-auto md:h-screen w-full border bg-black mt-4 md:mt-[5vh]'>
-          <div className='text-white border mx-4 md:mx-10 mt-4 md:mt-0'>
-            <div className=' text-4xl p-5 text-white font-bold '> Remote Voting with Absentee Ballots</div>
+        <div className='text-white border mx-4 md:mx-10 mt-4 md:mt-0'>
+           <div className=' text-4xl p-5 text-white font-bold '> Remote Voting with Absentee Ballots</div>
+           
             Whether you're at home, in the office, or at a cafe, voters can vote anywhere and anytime using their own devices including their iPhone, Android device phone or mailed ballots. Along with this flexibility, voters can enjoy the peace of mind knowing that their vote is secure. We provide unique personal voting keys using the same security as most major banks!
             <br />
 
-            <button className=' bg-orange-500 rounded-full mt-10 h-10 w-64 flex flex-row  items-center p-8 hover:text-black hover:bg-orange-400  hover:translate-y-2'>Explore Remote Voting</button>
+            <button class="border text-gray-50   duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 mt-10 font-extrabold hover:bg-sky-700">
+
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150  duration-700 right-20 -top-6 bg-orange-500"></div>
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8   rounded-full group-hover:scale-150  duration-700 right-32 top-6 bg-pink-500"></div>
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4   rounded-full group-hover:scale-150  duration-700 right-2 top-12 bg-red-600"></div>
+<p class="z-10 absolute bottom-2 left-2">Explore Remote Voting</p>
+</button>
+
           </div>
           <div className='text-white mx-4 md:mx-10 mt-4 md:mt-0'>
             <div className=' text-4xl p-5 text-white font-bold '>  In-person Voting at Polling Stations</div>
-
+            
             With in-person voting, voters can cast their vote easily, securely and secretly at a voting booth by using their iPhone, Android device or tablet after receiving credentials. No device? No problem! Setup and personalize your voting kiosk with a computer, share tablets with voters, or provide paper ballots for those voters more comfortable with traditional processes.
             <br />
 
-            <button className='  bg-orange-500  rounded-full mt-10 h-10 w-64 flex flex-row  items-center p-8 hover:text-black hover:bg-orange-400  hover:translate-y-2'>Explore in - person Voting</button>
-          </div>
+            <button class="border text-gray-50   duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 mt-10 font-extrabold hover:bg-sky-700">
+
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150  duration-700 right-20 -top-6 bg-orange-500"></div>
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8   rounded-full group-hover:scale-150  duration-700 right-32 top-6 bg-pink-500"></div>
+<div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4   rounded-full group-hover:scale-150  duration-700 right-2 top-12 bg-red-600"></div>
+<p class="z-10 absolute bottom-2 left-2">Explore In-Person Voting</p>
+</button>
+
+
+
+         </div>
         </div>
         <p className='text-5xl flex justify-center mb-4 md:mb-10 font-serif font-extrabold text-gray-500'>
           Who can Use it?
@@ -111,7 +130,7 @@ export default function Election() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. At tenetur est officiis, veniam, impedit voluptatibus nobis quaerat, dolorem perspiciatis exercitationem doloribus consequuntur quod? Quae odit quia nobis, quidem eum id.
 
           </p>
-        </div>
+      
       </div>
     </div>
   )
