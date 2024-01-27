@@ -17,7 +17,7 @@ export function MyFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
           <div>
             <Footer.Brand
-              href="/home.jsx"
+              href="/"
               src={img1}
               alt=" Logo"
               className=' size-32'
