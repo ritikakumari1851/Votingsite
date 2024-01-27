@@ -33,9 +33,10 @@ export default function Pricing() {
       <p className='mt-10 text-4xl text-center font-semibold'>Still Confused?? Explore Better Here</p>
       <p className='font-extrabold font-serif text-4xl text-center'>Our Best Deals</p>
       <div className='flex flex-col md:flex-row mx-5 md:mx-32 bg-green-200 p-8 md:p-20 gap-8 md:gap-10'>
-        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus quam, voluptatibus, porro temporibus delectus recusandae in magni pariatur incidunt architecto numquam eum reiciendis error maiores modi impedit est a aliquam?</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit reiciendis consequuntur, deserunt vitae cum ab similique fuga soluta maiores enim deleniti a distinctio ipsa necessitatibus sequi mollitia unde. Ex, labore.</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus quibusdam laborum quae voluptates aspernatur amet ad ea. Modi odio facere voluptatem! Exercitationem voluptatum quidem natus deleniti vel reprehenderit asperiores?</div>
+        <div className=' text-4xl text-black '>Monthly Deal <br/><p className=' text-lg mt-5 '>We provide you monthly package at 100$. In this deal we give you ultimate elections for one month.</p>
+        <button className=' text-xl h-10 w-40 rounded-full bg-black text-white hover:bg-white hover:text-black hover:translate-y-2 p-2 mt-10'> Get Started</button></div>
+        <div className=' text-4xl text-black'>Annual Deal <br/> <p className=' text-lg mt-5 '>We provide you annualy package at 200$. In this deal we give you unlimited access to all the features for one year.</p><button className=' text-xl h-10 w-40 rounded-full bg-black text-white hover:bg-white hover:text-black hover:translate-y-2 p-2 mt-10'> Get Started</button></div>
+        
       </div>
     </div>
   );
