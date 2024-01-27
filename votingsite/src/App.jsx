@@ -16,6 +16,8 @@ import { useEffect, useState } from 'react'
 import Dashboard from './pages/Dashboard'
 import Chatroom from './pages/Chatroom'
 import Forgotpas from './pages/Forgotpas'
+import Ballot from './pages/Ballot'
+import Voiting from './pages/Voiting'
 
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
     <Route path='/reset' element={<Reset/>}/>
     <Route path='/chat' element={<Chatroom/>}/>
     <Route path='/forgotpas' element={<Forgotpas/>}/>
+    <Route path='/Ballot' element= {<Ballot/>}/>
+    <Route path='/voiting' element= {<Voiting/>}/>
     { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
     </Routes>
    <MyFooter/>
