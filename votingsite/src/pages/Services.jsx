@@ -2,7 +2,7 @@ import React from 'react'
 import img1 from '../assets/service.jpg'
 import img3 from '../assets/done-for-you@2x.jpg'
 import img2 from '../assets/pngtree-election-day-political-hand-drawn-cartoon-flat-illustration-with-voters-casting-ballots-at-polling-place-in-united-states-suitable-for-poster-or-campaign-picture-image_876245.png'
-import Card from '../components/Card'
+import Card from '../components/card'
 import Slider from '../components/Slider'
 export default function Services() {
   return (
@@ -26,7 +26,7 @@ export default function Services() {
         <div>
         <h1 className=' text-5xl  font-extrabold p-5'>Run-It-Yourself, With Our Help
 Setup Consultation</h1>
-          <p>You’d like to do most of the setup, but you want to be sure it’s perfect. An ElectionBuddy Expert meets with you online to discuss your needs, answers questions, provides guidance and reviews your setup to ensure your election or meeting runs great. Add "on-call" email support for the duration of your vote for extra peace of mind.
+          <p>You'd like to do most of the setup, but you want to be sure it's perfect. An ElectionBuddy Expert meets with you online to discuss your needs, answers questions, provides guidance and reviews your setup to ensure your election or meeting runs great. Add "on-call" email support for the duration of your vote for extra peace of mind.
           </p>
           <button className=' bg-black p-5 text-white rounded-md mt-10'>
             Explore more

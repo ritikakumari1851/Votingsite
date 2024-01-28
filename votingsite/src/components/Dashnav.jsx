@@ -3,7 +3,11 @@ import img from '../assets/stock-vector-vote-icon-comic-style-ballot-box-cartoon
 import { Link } from 'react-router-dom'
 import Dropdown from './Dropdown'
 export default function Dashnav() {
-
+     
+  function logout(){
+    localStorage.removeItem("userToken")
+    alert("Logged out Sucessfully")
+  }
   return (
     <div className=' flex flex-col justify-between'>
      
@@ -21,7 +25,7 @@ export default function Dashnav() {
             </div>
             <div className=' flex flex-col items-center pr-8'>
             <p className=' pb-6 hover:text-white'>Edit profile</p>
-            <p className=' hover:text-white'>Sign out</p>
+            <button onClick={logout} className=' hover:text-white'><Link to={'/Login'}>Sign out</Link></button>
             </div>
         </div>
     </div>
