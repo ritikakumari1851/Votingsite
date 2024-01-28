@@ -8,8 +8,8 @@ import img4 from '../assets/decision.png'
 import img2 from '../assets/young-women-advertising-vote-online-election-white-background-vector.jpg'
 export default function Home() {
   return (
-    <div className='flex flex-col items-center mt-8'>
-      <div className='flex flex-col md:flex-row items-center mt-10 md:mt-20'>
+    <div className='flex flex-col items-center mt-5'>
+      <div className='flex flex-col md:flex-row items-center mt-10 md:mt-10'>
         <div className='md:w-full px-4 md:px-10'>
           <p className='text-2xl mb-5 font-sans font-medium text-orange-600'>
             Anonymous Voting & Customized Ballot
@@ -115,7 +115,7 @@ export default function Home() {
       <div className='flex flex-col md:flex-row justify-between h-80 w-full border bg-emerald-300 md:p-10 mt-5'>
         <div className=' flex flex-col'>
           <div className=' text-4xl text-black  p-5'> Boost Engagement </div>
-          <div className=' text-white font-semibold text-lg md:w-full  '>
+          <div className=' text-white font-semibold text-lg md:w-full mr-3 '>
             Notify voters using email, mail, text message or with your own systems.
             Receive undeliverable notice alerts and send reminders. Voters vote by phone, computer, mail or in person.
             <br />
@@ -126,9 +126,9 @@ export default function Home() {
         <div class=" w-2 bg-gradient-to-b from-black to-black h-auto"></div>
         <div className=' flex flex-col'>
           <div className=' text-4xl text-black md:w-full p-5'>  High-integrity Voting </div>
-          <div className=' text-white font-semibold text-lg md:w-full  '>
+          <div className=' text-white font-semibold text-lg md:w-full ml-2 mr-7  '>
 
-            Voters can only vote once and voting choices remain anonymous. Each ballot has one, secure voting key and the vote is auditable, verifiable and can be independently observed.
+            Voters can only vote once and voting choices remain  anonymous. Each ballot has one, secure voting key and the vote is auditable, verifiable and can be independently observed.
             <br />
             <br />
 
@@ -138,7 +138,7 @@ export default function Home() {
         <div className=' flex flex-col'>
 
           <div className=' text-4xl text-black md:w-full p-5'> Flexible Ballots</div>
-          <div className=' text-white font-semibold text-lg md:w-full'>
+          <div className=' text-white font-semibold text-lg md:w-full ml-4 '>
 
             Vote on executive officers, board positions, contract ratifications, bylaw amendments, budget approvals, acclamations and motions. Or run polls and surveys.
             <br />
@@ -151,7 +151,7 @@ export default function Home() {
       <div className='flex flex-col md:flex-row justify-between h-80 w-full border bg-white md:p-10'>
         <div className=' flex flex-col'>
           <div className=' text-4xl text-black  p-5'> Automated and Simple </div>
-          <div className=' text-gray-500 md:w-full  '>
+          <div className=' text-gray-500 md:w-full font-semibold text-lg mr-7  '>
             Setup your Election or Meeting Votes in 3 steps - spend ur time monitoring, not counting. Or engage our experts for dedicated assistance or independent election oversight.
             <br />
             <br />
@@ -161,7 +161,7 @@ export default function Home() {
         <div class=" w-2 bg-gradient-to-b from-black to-black h-auto"></div>
         <div className=' flex flex-col'>
           <div className=' text-4xl text-black md:w-full p-5'>  Real-time Results </div>
-          <div className=' text-gray-500 md:w-full  '>
+          <div className=' text-gray-500 md:w-full font-semibold text-lg ml-2 mr-7 '>
 
 
             Winners are immediately calculated using first past the post, cumulative voting, preferential ballot, STV Single transferable vote or approval voting. You can tabulate results yourself too!
@@ -177,7 +177,7 @@ export default function Home() {
 
           <div className=' text-4xl text-black md:w-full p-5'>
             Secure and Private</div>
-          <div className=' text-gray-500 md:w-full'>
+          <div className=' text-gray-500 md:w-full font-semibold text-lg ml-4'>
 
             256-bit encryption used to safeguard your vote — the same security as major banks. And we don’t share or use voter data — your elections stay private.
             <br />
@@ -193,7 +193,7 @@ export default function Home() {
 
    
     <div class="flex flex-col font-bold font-serif items-center justify-center h-auto bg-blue-500">
-        <div class="text-black text-3xl">Set Up Voting Yourself</div><br/><p className=' text-white text-lg font-normal'>
+        <div class="text-black text-3xl mt-5">Set Up Voting Yourself</div><br/><p className=' text-white text-lg font-normal ml-5'>
 Just answer a few questions, and we’ll guide you through the set up of your vote.</p>
 <img src={img3} className=' h-96 w-72 mt-5'/>
 <div class="w-full h-40 flex items-center justify-center cursor-pointer">
@@ -241,7 +241,7 @@ Just answer a few questions, and we’ll guide you through the set up of your vo
     </span>
     <span
       class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200"
-      >Get Products& Prices </span
+      >Get Products & Prices </span
     >
   </div>
 </div>
@@ -253,7 +253,7 @@ Just answer a few questions, and we’ll guide you through the set up of your vo
 
    
     <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-green-500">
-        <div class="text-black text-3xl  ">Voting Experts Can Help</div><br/><p className=' text-white text-lg font-normal'>
+        <div class="text-black text-3xl mt-5  ">Voting Experts Can Help</div><br/><p className=' text-white text-lg font-normal ml-5'>
 Get advice and answers as you go, with a final Expert review before voting starts.</p>
 <img src={img1} className=' h-96 w-72 mt-5'/>
 <div class="w-full h-40 flex items-center justify-center cursor-pointer">
@@ -301,7 +301,7 @@ Get advice and answers as you go, with a final Expert review before voting start
     </span>
     <span
       class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200"
-      >Get Products& Prices</span
+      >Get Products & Prices</span
     >
   </div>
 </div>
@@ -311,8 +311,8 @@ Get advice and answers as you go, with a final Expert review before voting start
 
    
     <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-yellow-300">
-        <div class="text-black text-3xl">We Do Your Voting Setup</div> <br/><p className=' text-white text-lg font-normal'>
-Have a dedicated Expert do it all remotely or onsite, from the start of voting to results.</p>
+        <div class="text-black text-3xl mt-5">We Do Your Voting Setup</div> <br/><p className=' text-white text-lg font-normal ml-5'>
+Have a dedicated Expert do it all remotely or onsite, from the start of voting to results.</p> 
 <img src={img4} className=' h-96 w-72 mt-5'/>
 <div class="w-full h-40 flex items-center justify-center cursor-pointer">
   <div
@@ -359,7 +359,7 @@ Have a dedicated Expert do it all remotely or onsite, from the start of voting t
     </span>
     <span
       class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200"
-      >Get Products& Prices</span
+      >Get Products & Prices</span
     >
   </div>
 </div>

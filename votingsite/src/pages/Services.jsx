@@ -49,15 +49,24 @@ Setup Consultation</h1>
         <Slider className=''/>
         </div>
         <div className=' flex flex-row justify-between gap-6 m-10'>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim iure sed tempora quod eligendi. Ipsa voluptatum aut temporibus amet et magni, nobis distinctio incidunt, similique dolorem ut minus quidem? Repellat!
+        <div className=' flex flex-col'>
+          <div className=' text-3xl font-serif font-bold p-2 mt-5 text-white bg-black '> Voting Setup</div>
+<p className=' p-5 font-medium'>Your Election Expert will complete setup to ensure your vote meets your needs. We will set up voting settings, custom ballots and schedule notice! And if you need compliance with bylaws, statutes, or legislation, we’ll work with your legal council too!
           </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, minima assumenda nihil nostrum exercitationem eveniet, error vitae dicta impedit accusamus ducimus incidunt, suscipit temporibus commodi cupiditate vel officiis illum dolore?</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quasi dolorem similique. Nemo animi dicta dignissimos autem dolore voluptatem aperiam accusamus a, quam rem suscipit veniam? Dolorum sint corrupti sit!</p>
+          </div>
+          <div className=' flex flex-col'>
+          <div className=' text-3xl font-serif font-bold p-2 mt-5 text-white bg-black  '>Dedicated Assistance</div>
+<p className=' p-5 font-medium'>Your Election Expert is with you from requirements to results. You'll meet online to review needs and test. During voting, help is a phone call away for questions about voter management or inquiries. Or for meetings, your expert assists using video, or runs the votes.</p>
+</div>
+<div className=' flex flex-col'>
+          <div className=' text-3xl font-serif font-bold p-2 mt-5 text-white bg-black'>Results Communication</div>
+<p className=' p-5 font-medium'>Your Election Expert guides you in delivering observable and accurate results quickly, along with tips on sharing results with your voters. And if your vote requires custom tallying or third party attestation or other reporting assistance, just ask!!</p>
+        </div>
         </div>
         <div className=' bg-[#002538] flex flex-col items-center'>
           <div className=' text-white p-20'>
             <p className=' text-6xl font-bold'>Not Sure How to Use these Services?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quam ducimus expedita libero maiores? Voluptas, magnam dolores velit, minima voluptatibus sunt eligendi ullam fuga expedita quaerat alias magni molestiae eos?
+            <p className=' p-7 font-medium'>Whether you just need a little help, or you want us to take care of your election or meeting, let’s chat about what works for you.
             </p>
           </div>
           <div className=' flex justify-center'>

@@ -88,7 +88,7 @@ export default function Election() {
           />
           <img
             className='w-full md:w-[30vh] h-[30vh] mb-4 md:mb-0'
-            src='..\src\assets\65239a541f5870e14459a587_64900e7335d6666c4a954f20_decision.png'
+            src='..\src\assets\decision.png'
             alt='Image2'
           />
           <img
