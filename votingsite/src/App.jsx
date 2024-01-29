@@ -18,6 +18,8 @@ import Chatroom from './pages/Chatroom'
 import Forgotpas from './pages/Forgotpas'
 import Ballot from './pages/Ballot'
 import Voiting from './pages/Voiting'
+import Profile from './pages/Profile'
+import Ballotbox from './pages/Ballotbox'
 
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
     <Route path='/forgotpas' element={<Forgotpas/>}/>
     <Route path='/Ballot' element= {<Ballot/>}/>
     <Route path='/voiting' element= {<Voiting/>}/>
+    <Route path='/profile' element= {<Profile/>}/>
+    <Route path='/Ballotbox' element= {<Ballotbox/>}/>
     { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
     </Routes>
    <MyFooter/>

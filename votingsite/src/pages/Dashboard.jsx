@@ -22,7 +22,7 @@ export default function Dashboard() {
       </div>
      
       <div className=''>
-        <p className=' mb-4 bg-blue-900 p-2'>Dashboard</p>
+        <p className=' mb-4 bg-gray-200 p-2'>Dashboard</p>
         <div className=' flex flex-row gap-2'>
       <button className=' px-28 py-16 bg-cyan-900 ml-2'>  hello</button>
       <button  className=' px-28 py-16 bg-orange-300'>  hello</button>

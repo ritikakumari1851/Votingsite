@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Slider from '../components/Slider';
-import Card from '../components/Card';
+import Card from '../components/card';
 import img1 from '../assets/Good team-pana.png'
 import img3 from '../assets/doyourself.jpg'
 import img4 from '../assets/decision.png'
@@ -194,7 +194,7 @@ export default function Home() {
    
     <div class="flex flex-col font-bold font-serif items-center justify-center h-auto bg-blue-500">
         <div class="text-black text-3xl mt-5">Set Up Voting Yourself</div><br/><p className=' text-white text-lg font-normal ml-5'>
-Just answer a few questions, and we’ll guide you through the set up of your vote.</p>
+Just answer a few questions, and we'll guide you through the set up of your vote.</p>
 <img src={img3} className=' h-96 w-72 mt-5'/>
 <div class="w-full h-40 flex items-center justify-center cursor-pointer">
   <div
