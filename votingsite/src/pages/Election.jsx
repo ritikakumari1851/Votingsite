@@ -40,14 +40,14 @@ export default function Election() {
           We Provide Two methods for Election
         </p>
         </div>
-        <div className='flex flex-col md:flex-row justify-between h-auto md:h-screen w-full border bg-black mt-4 md:mt-[5vh]'>
-        <div className='text-white border mx-4 md:mx-10 mt-4 md:mt-0'>
-           <div className=' text-4xl p-5 text-white font-bold '> Remote Voting with Absentee Ballots</div>
+        <div className='flex flex-col md:flex-row justify-between h-auto ml-4 md:h-screen w-full border bg-black mt-4 md:mt-[5vh]'>
+        <div className='text-white border mx-4 md:mx-10 mt-4  md:mt-0'>
+           <div className=' text-4xl p-5 ml-4 text-white font-bold '> Remote Voting with Absentee Ballots</div>
            
-            Whether you're at home, in the office, or at a cafe, voters can vote anywhere and anytime using their own devices including their iPhone, Android device phone or mailed ballots. Along with this flexibility, voters can enjoy the peace of mind knowing that their vote is secure. We provide unique personal voting keys using the same security as most major banks!
+           <div className=' ml-4'>Whether you're at home, in the office, or at a cafe, voters can vote anywhere and anytime using their own devices including their iPhone, Android device phone or mailed ballots. Along with this flexibility, voters can enjoy the peace of mind knowing that their vote is secure. We provide unique personal voting keys using the same security as most major banks!</div>
             <br />
-
-            <button class="border text-gray-50   duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 mt-10 font-extrabold hover:bg-sky-700">
+           
+            <button class="border text-gray-50 ml-4  duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 mt-10 font-extrabold hover:bg-sky-700">
 
 <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
 <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150  duration-700 right-20 -top-6 bg-orange-500"></div>
