@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../components/card';
+import Card from '../components/Card';
 import Image from '../assets/At the office-pana.png';
 
 export default function Election() {

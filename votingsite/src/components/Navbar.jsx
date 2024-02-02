@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { Transition } from "@headlessui/react";
 import { Link, useLocation } from "react-router-dom";
 import img from "../assets/stock-vector-vote-icon-comic-style-ballot-box-cartoon-vector-illustration-white.jpeg";
 import { MyContext } from "../Helpers/Context";
