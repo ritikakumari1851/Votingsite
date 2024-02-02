@@ -7,12 +7,12 @@ import {useLocation} from "react-router-dom"
 import img1 from '../assets/vote.png'
 export function MyFooter() {
   const location =useLocation();
-  if (location.pathname === '/Login' || location.pathname === '/voiting' || location.pathname === '/registration' || location.pathname === '/Ballot' || location.pathname === '/Reset' || location.pathname === '/Contact' || location.pathname === '/forgotpas' || location.pathname === '/dashboard' ) {
+  if (location.pathname === '/Login'|| location.pathname === '/ballotbox' || location.pathname === '/profile' || location.pathname === '/voiting' || location.pathname === '/registration' || location.pathname === '/Ballot' || location.pathname === '/Reset' || location.pathname === '/Contact' || location.pathname === '/forgotpas' || location.pathname === '/dashboard' ) {
    return null;
   } 
   
   return (
-    <Footer container className='rounded-none shadow-2xl'>
+    <Footer container className='rounded-none shadow-2xl mt-16'>
       <div className="w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
           <div>

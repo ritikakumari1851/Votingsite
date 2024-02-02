@@ -2,31 +2,29 @@ import React from 'react'
 import img1 from '../assets/service.jpg'
 import img3 from '../assets/done-for-you@2x.jpg'
 import img2 from '../assets/pngtree-election-day-political-hand-drawn-cartoon-flat-illustration-with-voters-casting-ballots-at-polling-place-in-united-states-suitable-for-poster-or-campaign-picture-image_876245.png'
-import Card from '../components/Card'
+import Card from '../components/card'
 import Slider from '../components/Slider'
 export default function Services() {
   return (
     <div>
       
-       <div className=' flex flex-row justify-between mt-32 ml-10 text-gray-900 '>
+       <div className=' flex flex-row justify-between mt-32 ml-10'>
        <div >
         <h1 className=' text-8xl font-tempo font-extrabold'>From support to setup to full Service</h1>
-        <p className=' text-gray-600 text-lg p-5'>Not every organization can run their election or <br/>meeting votes themselves due to their own bylaws<br/> or external statutes. That’s why we offer<br/> consultation, expert setup and voter management<br/> services so you and your voters are confident in<br/> the voting results. Learn how ElectionBuddy can<br/> meet your needs.
+        <p className=' text-gray-600 text-lg p-5 font-serif '>Not every organization can run their election or <br/>meeting votes themselves due to their own bylaws<br/> or external statutes. That’s why we offer<br/> consultation, expert setup and voter management<br/> services so you and your voters are confident in<br/> the voting results. Learn how ElectionBuddy can<br/> meet your needs.
         </p>
         <button className='cursor-pointer inline-flex items-center rounded-full px-9 py-3 text-xl font-mono font-semibold text-gray-600 hover:text-white border-2 border-gray-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-gray-900 duration-300  focus:bg-transparent mt-10'>Explore Our Services</button>
       </div>
         <div>
-      <img src={img1} className=''/>
+      <img src={img1} className=' size-2/3 ml-[20vh] rounded-lg'/>
       </div>
       </div>
-      <div className=' bg-black flex flex-row w-full h-[60vh] mt-10'>
-        <img src={img2}></img>
-      </div>
+     <hr className=' mt-20 h-1'/>
       <div className=' flex flex-row m-20 items-center'>
         <div>
         <h1 className=' text-5xl  font-extrabold p-5'>Run-It-Yourself, With Our Help
 Setup Consultation</h1>
-          <p>You’d like to do most of the setup, but you want to be sure it’s perfect. An ElectionBuddy Expert meets with you online to discuss your needs, answers questions, provides guidance and reviews your setup to ensure your election or meeting runs great. Add "on-call" email support for the duration of your vote for extra peace of mind.
+          <p>You'd like to do most of the setup, but you want to be sure it's perfect. An ElectionBuddy Expert meets with you online to discuss your needs, answers questions, provides guidance and reviews your setup to ensure your election or meeting runs great. Add "on-call" email support for the duration of your vote for extra peace of mind.
           </p>
           <button className=' bg-black p-5 text-white rounded-md mt-10'>
             Explore more

@@ -8,7 +8,7 @@ function Navbar() {
   console.log(userToken)
   const [isOpen, setIsOpen] = useState(false);
   const location =useLocation();
-  if (location.pathname === '/Login' || location.pathname === '/registration' || location.pathname === '/voiting'|| location.pathname === '/Ballot' || location.pathname === '/Reset' || location.pathname === '/forgotpas' || location.pathname === '/dashboard' ) {
+  if (location.pathname === '/Login'|| location.pathname === '/ballotbox'|| location.pathname === '/profile' || location.pathname === '/registration' || location.pathname === '/voiting'|| location.pathname === '/Ballot' || location.pathname === '/Reset' || location.pathname === '/forgotpas' || location.pathname === '/dashboard' ) {
    return null;
   } 
   return (
