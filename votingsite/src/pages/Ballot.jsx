@@ -44,7 +44,7 @@ export default function Ballot() {
           <div className='flex mt-[10vh] justify-between'>
             <img src={img1} className='size-32' />
             {!showInput && (
-              <button className='py-8 bg-blue-900 px-36 rounded-md flex text-white font-serif text-2xl items-center' onClick={() => setShowInput(true)}>Create new Ballot</button>
+              <button className='py-8 bg-blue-900 px-36 rounded-md flex text-black font-serif text-2xl items-center' onClick={() => setShowInput(true)}>Create new Ballot</button>
             )}
             <img src={img2} className='size-32' />
           </div>

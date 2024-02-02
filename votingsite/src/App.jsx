@@ -35,7 +35,7 @@ function App() {
   },[])
   return (
     <>
-   
+   <div style={{ backgroundColor: 'white' }}>
     <Navbar/>
     <Routes>
     <Route path='/' element={<Home/>}/>
@@ -55,6 +55,7 @@ function App() {
     { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
     </Routes>
    <MyFooter/>
+   </div>
     </>
   )
 }
