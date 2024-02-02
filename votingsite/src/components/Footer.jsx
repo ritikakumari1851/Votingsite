@@ -12,7 +12,7 @@ export function MyFooter() {
   } 
   
   return (
-    <Footer container className='rounded-none shadow-2xl'>
+    <Footer container className='rounded-none shadow-2xl mt-16'>
       <div className="w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-2">
           <div>

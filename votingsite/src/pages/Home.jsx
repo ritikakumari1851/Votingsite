@@ -5,7 +5,7 @@ import Card from '../components/card';
 import img1 from '../assets/Good team-pana.png'
 import img3 from '../assets/doyourself.jpg'
 import img4 from '../assets/decision.png'
-import img2 from '../assets/young-women-advertising-vote-online-election-white-background-vector.jpg'
+import img2 from '../assets/1.jpg'
 export default function Home() {
   return (
     <div className='flex flex-col items-center mt-5'>
@@ -45,20 +45,20 @@ export default function Home() {
       </div>
       <div className='mt-12 text-4xl font-bold text-center border-t'>
         <p className='pt-8'>Types of Elections You Can Organize</p>
-        <p className='text-orange-600 text-3xl mt-4 font-medium'>
+        <p className='text-gray-300 text-3xl mt-4 font-medium'>
           Cast Your Vote To.
         </p>
       </div>
-      <p className='text-center mt-6 text-gray-600'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui commodi
-        quo, officiis explicabo nobis laboriosam repellat animi adipisci unde
-        distinctio, tempora sed magnam magni perspiciatis minima numquam atque
-        quasi maxime?
+      <p className='text-center mt-6 text-xl mx-20 text-gray-300'>
+       Vote on click provides full freedom to the voters as well as the administrators. All the candidates are to be assigned by the admin randomly and voters can register themself for voting by logging in.
+
       </p>
       <div className='flex flex-wrap gap-3 mt-12 border-t justify-between px-44'>
         <div className='w-full sm:w-1/3 md:w-1/5'>
 
-          <Card title={'Voting'} />
+          <Card title={'Voting'}
+          img src={img2}
+          />
 
         </div>
         <div className='w-full sm:w-1/3 md:w-1/5 p-2'>
@@ -83,30 +83,6 @@ export default function Home() {
           <Card title={"voting"} />
         </div>
 
-
-      </div>
-      <div className='flex flex-col md:flex-row justify-between h-screen w-full border bg-gray-500 md:p-10'>
-        <div className=' flex flex-col'>
-          <div className=' text-4xl text-black p-5'>  Election Excellence </div>
-          <div className='text-white md:w-full mb-4 md:mb-0'>
-
-            Vote OnClick is easy for voters to cast ballots,
-            with the convenience of voting from their home, by mail or on-site.
-            <br />
-            <br />
-
-          </div>
-        </div>
-        <div className=' flex flex-col'>
-
-          <div className=' text-4xl text-black md:w-full p-5'> Marvelous Meetings</div>
-          <div className='text-white md:w-full'>
-
-            Vote OnClick easily runs all your votes for in-person meetings, videoconferences and hybrid meetings too.
-            <br />
-            <br />
-          </div>
-        </div>
 
       </div>
       <p className='text-4xl mt-10 text-center'>

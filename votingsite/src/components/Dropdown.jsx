@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import img1 from '../assets/user.png'
 export default function Dropdown() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -6,6 +6,34 @@ export default function Dropdown() {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  const [userData, setUserData] = useState(null);
+  useEffect(() => {
+  const fetchUserData = async () => {
+    try {
+      // Replace the URL with your actual backend URL
+      const response = await fetch('http://localhost:3000/get-user', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+
+          // Add any headers required for authentication or other purposes
+          'Authorization': localStorage.getItem("userToken"),
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setUserData(data.user);
+      } else {
+        console.error('Error fetching user data:', response.status);
+      }
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+    }
+  };
+
+  fetchUserData();
+}, []);
 
   return (
     <div>
@@ -22,7 +50,9 @@ export default function Dropdown() {
           src={img1}
           alt="user photo"
         />
-        Bonnie Green
+        <p className='font-serif font-bold hover:text-white'>
+            {userData ? userData.full_name : 'Loading...'}
+          </p>
       
           <path
             stroke="currentColor"
