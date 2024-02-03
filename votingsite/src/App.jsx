@@ -20,6 +20,7 @@ import Ballot from './pages/Ballot'
 import Voiting from './pages/Voiting'
 import Profile from './pages/Profile'
 import Ballotbox from './pages/Ballotbox'
+import Kschool from './costumer/Kschool'
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
     <Route path='/profile' element= {<Profile/>}/>
     <Route path='/Ballotbox' element= {<Ballotbox/>}/>
     { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
+    <Route path='/kschool' element={<Kschool/>}/>
     </Routes>
    <MyFooter/>
    </div>

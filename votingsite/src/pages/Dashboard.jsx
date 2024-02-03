@@ -29,7 +29,7 @@ export default function Dashboard() {
       <button  className=' px-28 py-16 bg-green-400'>  hello</button>
       <button  className=' px-28 py-16 bg-gray-600'>  hello</button>
       </div>
-      <p className=' text-center font-serif text-4xl mt-10'>
+      <p className=' text-center text-black font-serif text-4xl mt-10'>
         Our most recent Candidate
       </p>
       <div className=' flex flex-row justify-between mt-10 mx-20'>

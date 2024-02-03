@@ -9,7 +9,7 @@ export default function Services() {
     <div>
       <div className=" flex flex-row justify-between pt-32 ml-10">
         <div>
-          <h1 className=" text-8xl font-tempo font-extrabold">
+          <h1 className=" text-8xl text-black font-tempo font-extrabold">
             From support to setup to full Service
           </h1>
           <p className=" text-gray-600 text-lg p-5 font-serif ">
@@ -31,11 +31,11 @@ export default function Services() {
       </div>
       <hr className=" mt-20 h-1" />
       <div className=" flex flex-row m-20 items-center">
-        <div>
+        <div className=" text-black">
           <h1 className=" text-5xl  font-extrabold p-5">
             Run-It-Yourself, With Our Help Setup Consultation
           </h1>
-          <p>
+          <p >
             You'd like to do most of the setup, but you want to be sure it's
             perfect. An ElectionBuddy Expert meets with you online to discuss
             your needs, answers questions, provides guidance and reviews your
@@ -68,7 +68,7 @@ export default function Services() {
             {" "}
             Voting Setup
           </div>
-          <p className=" p-5 font-medium">
+          <p className=" p-5 text-black font-medium">
             Your Election Expert will complete setup to ensure your vote meets
             your needs. We will set up voting settings, custom ballots and
             schedule notice! And if you need compliance with bylaws, statutes,
@@ -79,7 +79,7 @@ export default function Services() {
           <div className=" text-3xl font-serif font-bold p-2 mt-5 text-white bg-black  ">
             Dedicated Assistance
           </div>
-          <p className=" p-5 font-medium">
+          <p className=" p-5 text-black font-medium">
             Your Election Expert is with you from requirements to results.
             You'll meet online to review needs and test. During voting, help is
             a phone call away for questions about voter management or inquiries.
@@ -90,7 +90,7 @@ export default function Services() {
           <div className=" text-3xl font-serif font-bold p-2 mt-5 text-white bg-black">
             Results Communication
           </div>
-          <p className=" p-5 font-medium">
+          <p className=" p-5 text-black font-medium">
             Your Election Expert guides you in delivering observable and
             accurate results quickly, along with tips on sharing results with
             your voters. And if your vote requires custom tallying or third

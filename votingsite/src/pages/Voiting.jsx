@@ -27,7 +27,7 @@ export default function Voiting() {
       <div className=' flex flex-col'>
       <img src={img} className=' ml-20 size-2/3'/>
       <p className=' text-4xl font-serif ml-32 text-orange-400'>Voting Begins here!</p>
-      <p className=' text-2xl font-sans ml-40 mt-10'>Grab Your Ballot Now</p>
+      <p className=' text-2xl text-black font-sans ml-40 mt-10'>Grab Your Ballot Now</p>
       </div>
     </div>
    
