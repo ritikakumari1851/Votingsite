@@ -6,10 +6,10 @@ export default function Election() {
   return (
     <div>
       <div className=" pt-10">
-        <div className="text-7xl flex flex-col md:flex-row md:justify-between">
+        <div className="text-7xl flex flex-col text-black md:flex-row md:justify-between">
           <h1 className="mt-8 md:mt-[30vh] text-center md:text-left font-bold md:ml-[10vh]">
             <p className="text-4xl mb-6 text-orange-700 font-thin">
-              Choose Professional &
+              Choose Professional &  
             </p>
             CHOOSE YOUR ACTION
             <br />
@@ -37,12 +37,12 @@ export default function Election() {
         </div>
         <hr className="my-8 md:my-[10vh]" />
 
-        <p className="text-5xl flex justify-center font-semibold">
+        <p className="text-5xl text-black  flex justify-center font-semibold">
           We Provide Two methods for Election
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between h-auto w-full border bg-black mt-4 md:mt-[5vh] py-10 ">
+      <div className="flex flex-col md:flex-row justify-between h-auto w-full border bg-orange-600 mt-4 md:mt-[5vh] py-10 ">
         <div className="text-white mx-4 md:mx-10 mt-4 md:mt-0">
           <div className=" text-4xl text-white font-bold p-10">
             {" "}
@@ -59,7 +59,7 @@ export default function Election() {
           </div>
           <br />
 
-          <button class="border text-gray-50 ml-4  duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 mt-10 font-extrabold hover:bg-sky-700" />
+         
 
           <button class="border text-gray-50  duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 mt-10 font-extrabold hover:bg-sky-700">
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
@@ -69,6 +69,7 @@ export default function Election() {
             <p class="z-10 absolute bottom-2 left-2">Explore Remote Voting</p>
           </button>
         </div>
+        <div class=" w-2 bg-gradient-to-b from-black to-black h-auto"></div>
         <div className="text-white mx-4 md:mx-10 mt-4 md:mt-0 p-10">
           <div className=" text-4xl p-5 text-white font-bold ">
             {" "}
@@ -81,6 +82,7 @@ export default function Election() {
           voters, or provide paper ballots for those voters more comfortable
           with traditional processes.
           <br />
+
           <button class="border text-gray-50   duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2 mt-10 font-extrabold hover:bg-sky-700">
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150  duration-700 right-20 -top-6 bg-orange-500"></div>
@@ -88,11 +90,11 @@ export default function Election() {
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4   rounded-full group-hover:scale-150  duration-700 right-2 top-12 bg-red-600"></div>
             <p class="z-10 absolute bottom-2 left-2">
               Explore In-Person Voting
-            </p>
+              </p>
           </button>
         </div>
       </div>
-      <p className="text-5xl flex justify-center mb-4 md:mb-10 font-serif font-extrabold text-gray-500">
+      <p className="text-5xl flex justify-center mt-5 mb-4 md:mb-10 font-serif font-extrabold text-gray-500">
         Who can Use it?
       </p>
       <div className="flex flex-col md:flex-row justify-between mx-4 md:mx-10">

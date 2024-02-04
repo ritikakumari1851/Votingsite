@@ -24,24 +24,26 @@ export default function Dashboard() {
           <Dashnav />
         </div>
 
-        <div className=" mt-2 text-2xl font-serif">
+        <div className=" mt-2">
           <div className=" flex flex-row gap-2">
-            <button className=" px-24 py-16 bg-cyan-950 ml-2">
-              {" "}
-              <img src={img2} className=" mb-2" /> Ballot
+            <button className=" px-20 py-16 bg-cyan-900 ml-2">
+              <img src={img2} />
+              Candidates{" "}
             </button>
-            <button className=" px-20 py-16 bg-orange-600">
-              <img src={img3} className=" w-10 h-10 mb-2" /> Candidate
-            </button>
-            <button className=" px-24 py-16 bg-green-800">
+            <button className=" px-20 py-16 bg-orange-300">
               {" "}
-              <img src={img4} className=" mb-2" />
-              Voter
+              <img src={img3} />
+              Ballot{""}
             </button>
-            <button className=" px-20 py-16 bg-gray-800">
+            <button className=" px-20 py-16 bg-green-400">
               {" "}
-              <img src={img5} className="mb-2" />
-              Results
+              <img src={img4} />
+              Voters{""}
+            </button>
+            <button className=" px-20 py-16 bg-gray-600">
+              {" "}
+              <img src={img5} />
+              Results{""}
             </button>
           </div>
           <p className=" text-center font-serif text-4xl mt-10 text-black">

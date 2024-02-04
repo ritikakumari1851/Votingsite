@@ -55,7 +55,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/ballotbox" element={<Ballotbox />} />
           <Route path="/candidatelist" element={<Candidatelist />} />
-          <Route path="/voterlog" element={<Voterlogin/>} />
+          <Route path="/voterlog" element={<Voterlogin />} />
           <Route path="/voteregister" element={<Voteregister />} />
           {loggedIn && <Route path="/dashboard" element={<Dashboard />} />}
         </Routes>

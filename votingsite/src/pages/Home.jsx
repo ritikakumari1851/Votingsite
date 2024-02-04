@@ -38,13 +38,13 @@ export default function Home() {
       <div className="max-h-[30vh] w-full mt-6 rounded-xl">
         <Slider />
       </div>
-      <div className="mt-12 text-4xl font-bold text-center border-t">
+      <div className="mt-12 text-4xl text-black font-bold text-center border-t">
         <p className="pt-8">Types of Elections You Can Organize</p>
-        <p className="text-gray-300 text-3xl mt-4 font-medium">
+        <p className="text-black text-3xl mt-4 font-medium">
           Cast Your Vote To.
         </p>
       </div>
-      <p className="text-center mt-6 text-xl mx-20 text-gray-300">
+      <p className="text-center mt-6 text-xl mx-20 text-black">
         Vote on click provides full freedom to the voters as well as the
         administrators. All the candidates are to be assigned by the admin
         randomly and voters can register themself for voting by logging in.
@@ -54,31 +54,31 @@ export default function Home() {
           <Card title={"Voting"} img={img1} />
         </div>
         <div className="w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"Voting Ad"} />
+          <Card title={"Voting Ad"} img={img2} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} />
+          <Card title={"voting"} img={img3} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} />
+          <Card title={"voting"} img={img3} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting ad"} />
+          <Card title={"voting ad"} img={img3} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} />
+          <Card title={"voting"} img={img3} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting ad"} />
+          <Card title={"voting ad"} img={img3} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} />
+          <Card title={"voting"} img={img3} />
         </div>
       </div>
-      <p className="text-4xl mt-10 text-center">
+      <p className="text-4xl text-black mt-10 text-center">
         Take Your Vote To the Next Level with Us
       </p>
-      <div className="flex flex-col md:flex-row justify-between h-80 w-full border bg-emerald-300 md:p-10 mt-5">
+      <div className="flex flex-col md:flex-row justify-between h-80 w-full border bg-orange-600 md:p-10 mt-5">
         <div className=" flex flex-col">
           <div className=" text-4xl text-black  p-5"> Boost Engagement </div>
           <div className=" text-white font-semibold text-lg md:w-full mr-3 ">
@@ -165,9 +165,9 @@ export default function Home() {
         </div>
       </div>
       <div class=" w-2 bg-gradient-to-b from-black to-black h-auto"></div>
-      <div className="text-4xl font-bold mt-10 text-center">
+      <div className="text-4xl text-black font-bold mt-10 text-center">
         Voting done right with the right help you need <br />{" "}
-        <p className=" text-lg font-normal p-5">
+        <p className=" text-lg text-black font-normal p-5">
           We’ve seen thousands of organizations handle millions of voters so we
           understand your wants and needs. Whether you want to run it yourself,
           need a little training, or have us do the entire vote for you, we can
@@ -175,7 +175,7 @@ export default function Home() {
         </p>
       </div>
       <body class="font-sans flex flex-row bg-gray-100">
-        <div class="flex flex-col font-bold font-serif items-center justify-center h-auto bg-blue-500">
+        <div class="flex flex-col font-bold font-serif items-center justify-center h-auto bg-orange-600">
           <div class="text-black text-3xl mt-5">Set Up Voting Yourself</div>
           <br />
           <p className=" text-white text-lg font-normal ml-5">
@@ -278,7 +278,7 @@ export default function Home() {
         </div>
         <div class="w-4 bg-gradient-to-b from-blue-500 via-green-400 to-blue-500 h-auto"></div>
 
-        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-yellow-300">
+        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-orange-600">
           <div class="text-black text-3xl mt-5">We Do Your Voting Setup</div>{" "}
           <br />
           <p className=" text-white text-lg font-normal ml-5">

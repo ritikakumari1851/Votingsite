@@ -1,6 +1,7 @@
 import React from "react";
 import Pricingc from "../components/Pricingc";
 import img1 from "../assets/price.jpg";
+import { Link } from "react-router-dom";
 
 export default function Pricing() {
   return (
@@ -10,8 +11,8 @@ export default function Pricing() {
           <img src={img1} className="w-full md:pt-20" alt="Price" />
         </div>
         <div className="flex items-center md:w-1/2">
-          <div className="flex flex-col gap-10 ml-10">
-            <p className="font-bold text-4xl text-center">
+          <div className="flex flex-col text-black gap-10 ml-10">
+            <p className="font-bold  text-4xl text-center">
               Get Best deals at Best Price
             </p>
             <p className="text-center">
@@ -67,10 +68,10 @@ export default function Pricing() {
           cost={"200$"}
         />
       </div>
-      <p className="mt-10 text-4xl text-center font-semibold">
+      <p className="mt-10 text-4xl  text-black text-center font-semibold">
         Still Confused?? Explore Better Here
       </p>
-      <p className="font-extrabold font-serif text-4xl text-center">
+      <p className="font-extrabold text-black font-serif text-4xl text-center">
         Our Best Deals
       </p>
       <div className="flex flex-col md:flex-row mx-5 md:mx-32 bg-gray-200 p-8 md:p-20 gap-8 md:gap-10 mt-10 rounded-md">
@@ -80,10 +81,12 @@ export default function Pricing() {
             We provide you monthly package at 100$. In this deal we give you
             ultimate elections for one month.
           </p>
-          <button className=" text-xl h-10 w-40 rounded-full bg-black text-white hover:bg-white hover:text-black hover:translate-y-2 p-2 mt-10">
-            {" "}
-            Get Started
-          </button>
+          
+          
+           <Link to={'/registration'}>
+            <p className=" text-xl h-10 w-40 rounded-full bg-black text-white hover:bg-white hover:text-black hover:translate-y-2 p-2 mt-10" > Get Started </p>
+            </Link>
+          
         </div>
         <div className=" text-4xl text-black">
           Annual Deal <br />{" "}
@@ -91,10 +94,9 @@ export default function Pricing() {
             We provide you annualy package at 200$. In this deal we give you
             unlimited access to all the features for one year.
           </p>
-          <button className=" text-xl h-10 w-40 rounded-full bg-black text-white hover:bg-white hover:text-black hover:translate-y-2 p-2 mt-10">
-            {" "}
-            Get Started
-          </button>
+          <Link to={'/registration'}>
+            <p className=" text-xl h-10 w-40 rounded-full bg-black text-white hover:bg-white hover:text-black hover:translate-y-2 p-2 mt-10" > Get Started </p>
+            </Link>
         </div>
       </div>
     </div>
