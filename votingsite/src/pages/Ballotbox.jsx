@@ -1,80 +1,193 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Ballotbox() {
+  const [numberOfForms, setNumberOfForms] = useState(1);
+  const [currentFormIndex, setCurrentFormIndex] = useState(0);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [formData, setFormData] = useState(
+    Array.from({ length: 1 }, () => ({
+      profilePicture: null,
+      fullname: "",
+      email: "",
+      about: "",
+      mobile_no: "",
+      adhar_no: "",
+      position: "",
+    }))
+  );
+
+  const handleInputChange = (event) => {
+    const value = parseInt(event.target.value, 10);
+    setNumberOfForms(isNaN(value) ? 1 : value);
+    setFormData(
+      Array.from({ length: value }, () => ({
+        profilePicture: null,
+        fullname: "",
+        email: "",
+        about: "",
+        mobile_no: "",
+        adhar_no: "",
+        position: "",
+      }))
+    );
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("http://localhost:3000/candidate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData[currentFormIndex]),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      console.log(`Form ${currentFormIndex + 1} submitted successfully`);
+
+      setCurrentFormIndex((prevIndex) => prevIndex + 1);
+
+      if (currentFormIndex + 1 === numberOfForms) {
+        setSuccessMessage("All forms submitted successfully!");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
+  const handleFormChange = (index, field, value) => {
+    setFormData((prevData) =>
+      prevData.map((data, i) => (i === index ? { ...data, [field]: value } : data))
+    );
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setFormData((prevData) =>
+        prevData.map((data, i) =>
+          i === currentFormIndex ? { ...data, profilePicture: reader.result } : data
+        )
+      );
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const renderCurrentForm = () => {
+    if (currentFormIndex >= numberOfForms) {
+      return null;
+    }
+
+    const data = formData[currentFormIndex];
+
+    return (
+      <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6 mb-4">
+        <h2 className="text-2xl font-bold text-gray-200 mb-4">Candidate Registration</h2>
+        <form className="flex flex-wrap" onSubmit={handleSubmit}>
+          <label htmlFor="profilePicture">Profile Picture:</label>
+          <input
+            type="file"
+            id="profilePicture"
+            accept="image/*"
+            onChange={handleFileChange}
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          />
+          {data.profilePicture && (
+            <div>
+              <p>Selected Image:</p>
+              <img
+                src={data.profilePicture}
+                alt="Preview"
+                style={{ maxWidth: "100%", maxHeight: "200px" }}
+              />
+            </div>
+          )}
+          <input
+            type="text"
+            value={data.fullname}
+            onChange={(e) => handleFormChange(currentFormIndex, "fullname", e.target.value)}
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
+            placeholder="Full Name"
+          />
+          <input
+            type="email"
+            value={data.email}
+            onChange={(e) => handleFormChange(currentFormIndex, "email", e.target.value)}
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            value={data.about}
+            onChange={(e) => handleFormChange(currentFormIndex, "about", e.target.value)}
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+            placeholder="About"
+          />
+          <input
+            type="mobile_no"
+            value={data.mobile_no}
+            onChange={(e) => handleFormChange(currentFormIndex, "mobile_no", e.target.value)}
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+            placeholder="Mobile Number"
+          />
+          <input
+            type="number"
+            value={data.adhar_no}
+            onChange={(e) => handleFormChange(currentFormIndex, "adhar_no", e.target.value)}
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+            placeholder="Adhar Number"
+          />
+          <input
+            type="text"
+            value={data.position}
+            onChange={(e) => handleFormChange(currentFormIndex, "position", e.target.value)}
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+            placeholder="Position"
+          />
+          <button
+            type="submit"
+            className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+          >
+            Save Form {currentFormIndex + 1}
+          </button>
+        </form>
+      </div>
+    );
+  };
+
   return (
     <div>
-        <Link to={'/dashboard'}><button class="button">
-  <div class="button-box">
-    <span class="button-elem">
-      <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
-        ></path>
-      </svg>
-    </span>
-    <span class="button-elem">
-      <svg viewBox="0 0 46 40">
-        <path
-          d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
-        ></path>
-      </svg>
-    </span>
-  </div>
-</button>
-</Link>
+      <Link to={"/dashboard"}>
+        <button className="button">{"<="}</button>
+      </Link>
 
-      <div class="flex flex-col items-center justify-center h-screen dark">
-  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-bold text-gray-200 mb-4">Candidate Registration</h2>
+      <div className="flex flex-col items-center justify-center h-screen dark">
+        <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+          <label>
+            Enter the number of Candidate You want to register:
+            <input
+              type="number"
+              value={numberOfForms}
+              onChange={handleInputChange}
+              className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+            />
+          </label>
 
-    <form class="flex flex-wrap">
-      <input
-        type="text"
-        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
-        placeholder="Full Name"
-      />
-      <input
-        type="email"
-        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
-        placeholder="Email"
-      />
-      <input
-        type="number"
-        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
-        placeholder="Phone Number"
-      />
-      <input
-        type="number"
-        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
-        placeholder="Adhar no."
-      />
-      <input
-        type="text"
-        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
-        placeholder="Position"
-      />
-      <input
-        type="date"
-        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
-        placeholder="Date of Birth"
-      />
-      <textarea
-        name="Campaign message"
-        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-auto md:mb-auto md:w-full md:h-auto md:min-h-[100px] md:max-h-[100px] md:flex-grow md:flex-shrink md:flex-auto focus:bg-gray-md:focus:outline-none:focus:ring-blue-md:focus:border-transparent transition ease-in-out duration-fastest"
-        placeholder="Message"
-      ></textarea>
+          {renderCurrentForm()}
 
-      <button
-        type="submit"
-        class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
-      >
-        Save
-      </button>
-    </form>
-  </div>
-</div>
-
+          {successMessage && <div className="mt-4 text-green-500">{successMessage}</div>}
+        </div>
+      </div>
     </div>
-  )
+  );
 }
