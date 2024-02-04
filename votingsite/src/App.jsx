@@ -51,7 +51,7 @@ function App() {
     <Route path='/Ballot' element= {<Ballot/>}/>
     <Route path='/voiting' element= {<Voiting/>}/>
     <Route path='/profile' element= {<Profile/>}/>
-    <Route path='/Ballotbox' element= {<Ballotbox/>}/>
+    <Route path='/ballotbox' element= {<Ballotbox/>}/>
     { loggedIn && <Route path='/dashboard' element={<Dashboard/>}/>}
     </Routes>
    <MyFooter/>
