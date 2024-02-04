@@ -18,7 +18,8 @@ function Navbar() {
     location.pathname === "/Reset" ||
     location.pathname === "/forgotpas" ||
     location.pathname === "/dashboard" ||
-    location.pathname === "/Ballotbox"
+    location.pathname === "/Ballotbox" ||
+    location.pathname === "/candidatelist"
   ) {
     return null;
   }
