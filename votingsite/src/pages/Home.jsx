@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center pt-5">
       <div className="flex flex-col md:flex-row items-center mt-10 md:mt-10">
-        <div className="md:w-full px-4 md:px-10">
+        <div className="md:w-full px-4 md:px-10 ">
           <p className="text-2xl mb-5 font-sans font-medium text-orange-600">
             Anonymous Voting & Customized Ballot
           </p>

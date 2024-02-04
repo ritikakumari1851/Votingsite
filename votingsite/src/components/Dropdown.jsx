@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import img1 from '../assets/user.png';
+import React, { useState, useEffect } from "react";
+import img1 from "../assets/user.png";
 
 export default function Dropdown() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -13,13 +13,13 @@ export default function Dropdown() {
     const fetchUserData = async () => {
       try {
         // Replace the URL with your actual backend URL
-        const response = await fetch('http://localhost:3000/get-user', {
-          method: 'GET',
+        const response = await fetch("http://localhost:3000/get-user", {
+          method: "GET",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
 
             // Add any headers required for authentication or other purposes
-            'Authorization': localStorage.getItem('userToken'),
+            Authorization: localStorage.getItem("userToken"),
           },
         });
 
@@ -27,10 +27,10 @@ export default function Dropdown() {
           const data = await response.json();
           setUserData(data.user);
         } else {
-          console.error('Error fetching user data:', response.status);
+          console.error("Error fetching user data:", response.status);
         }
       } catch (error) {
-        console.error('Error fetching user data:', error);
+        console.error("Error fetching user data:", error);
       }
     };
 
@@ -53,7 +53,7 @@ export default function Dropdown() {
           alt="user photo"
         />
         <p className="font-serif font-bold hover:text-white">
-          {userData ? userData.full_name : 'Loading...'}
+          {userData ? userData.full_name : "Loading..."}
         </p>
         <path
           stroke="currentColor"
