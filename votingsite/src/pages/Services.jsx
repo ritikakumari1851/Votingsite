@@ -7,11 +7,18 @@ import Slider from "../components/Slider";
 export default function Services() {
   return (
     <div>
-      <div className=" flex flex-row justify-between pt-32 ml-10">
-        <div>
-          <h1 className=" text-8xl text-black font-tempo font-extrabold">
-            From support to setup to full Service
-          </h1>
+      <div className=" flex flex-row justify-between pt-32 ">
+      <div className="flex flex-col md:flex-row items-center mt-10 md:mt-10">
+        <div className="md:w-full px-4 md:px-10 ">
+        <p className="text-7xl   mb-5 font-sans font-medium text-orange-600 ">
+           From Support TO
+          </p>
+          <p className="text-4xl mb-5 font-serif font-extrabold text-gray-900">
+            Setup To 
+          </p>
+          <p className="text-7xl mb-5 font-sans font-medium text-orange-600">
+           Full Service
+          </p>
           <p className=" text-gray-600 text-lg p-5 font-serif ">
             Not every organization can run their election or <br />
             meeting votes themselves due to their own bylaws
@@ -25,8 +32,9 @@ export default function Services() {
             Explore Our Services
           </button>
         </div>
-        <div>
-          <img src={img1} className=" size-2/3 ml-[20vh] rounded-lg" />
+        </div>
+        <div className="md:w-full mt-6 md:mt-0">
+          <img src={img1} className="w-full md:float-right" alt="Good Team" />
         </div>
       </div>
       <hr className=" mt-20 h-1" />
@@ -64,7 +72,7 @@ export default function Services() {
       </div>
       <div className=" flex flex-row justify-between gap-6 m-10">
         <div className=" flex flex-col">
-          <div className=" text-3xl font-serif font-bold p-2 mt-5 text-white bg-black ">
+          <div className=" text-2xl font-serif font-bold p-2 mt-5 text-white bg-orange-600 ">
             {" "}
             Voting Setup
           </div>
@@ -76,7 +84,7 @@ export default function Services() {
           </p>
         </div>
         <div className=" flex flex-col">
-          <div className=" text-3xl font-serif font-bold p-2 mt-5 text-white bg-black  ">
+          <div className=" text-2xl font-serif font-bold p-2 mt-5 text-white bg-orange-600 ">
             Dedicated Assistance
           </div>
           <p className=" p-5 text-black font-medium">
@@ -87,7 +95,7 @@ export default function Services() {
           </p>
         </div>
         <div className=" flex flex-col">
-          <div className=" text-3xl font-serif font-bold p-2 mt-5 text-white bg-black">
+          <div className=" text-2xl font-serif font-bold p-2 mt-5 text-white bg-orange-600">
             Results Communication
           </div>
           <p className=" p-5 text-black font-medium">

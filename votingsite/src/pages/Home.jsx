@@ -23,7 +23,7 @@ export default function Home() {
             to know how to use.
           </p>
           <div className="flex flex-col md:flex-row md:items-center gap-4 mt-10">
-            <button className="animate-bounce-slow bg-gray-900 p-4 pl-8 pr-8 font-serif text-xl text-white rounded-md">
+            <button className="animate-bounce-slow bg-orange-600 p-4 pl-8 pr-8 font-serif text-xl text-white hover:bg-gray-900 rounded-md">
               Start Now
             </button>
             <p className="mt-2 md:mt-0 font-sans font-semibold text-blue-900 text-lg">
@@ -227,7 +227,7 @@ export default function Home() {
 
         <div class=" w-4 bg-gradient-to-b from-yellow-300 via-green-400 to-yellow-300 h-auto"></div>
 
-        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-green-500">
+        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-orange-600">
           <div class="text-black text-3xl mt-5  ">Voting Experts Can Help</div>
           <br />
           <p className=" text-white text-lg font-normal ml-5">
