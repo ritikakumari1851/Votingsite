@@ -5,6 +5,7 @@ import img1 from "../assets/Good team-pana.png";
 import img3 from "../assets/doyourself.jpg";
 import img4 from "../assets/decision.png";
 import img2 from "../assets/1.jpg";
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="flex flex-col items-center pt-5">
@@ -219,7 +220,7 @@ export default function Home() {
                 </svg>
               </span>
               <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-                Get Products & Prices{" "}
+                <Link to={'/pricing'}>Get Product & Price</Link>
               </span>
             </div>
           </div>
@@ -271,7 +272,7 @@ export default function Home() {
                 </svg>
               </span>
               <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-                Get Products & Prices
+              <Link to={'/pricing'}>Get Product & Price</Link>
               </span>
             </div>
           </div>
@@ -322,7 +323,7 @@ export default function Home() {
                 </svg>
               </span>
               <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-                Get Products & Prices
+              <Link to={'/pricing'}>Get Product & Price</Link>
               </span>
             </div>
           </div>
