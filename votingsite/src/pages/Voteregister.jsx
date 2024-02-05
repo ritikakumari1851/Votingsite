@@ -1,6 +1,53 @@
 import React from "react";
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
 export default function Voteregister() {
+  const [full_name, setfull_name] = useState();
+  const [email, setemail] = useState();
+  const [username, setusername] = useState();
+  const [Dob, setDob] = useState();
+  const [gender, setgender] = useState();
+  const [mobile_no, setmobile_no] = useState();
+  const [password, setpassword] = useState();
+
+  function handleRegister(e) {
+    e.preventDefault();
+    const body = {
+      full_name,
+      email,
+      username,
+      Dob,
+      gender,
+      mobile_no,
+      password,
+    };
+    fetch("http://localhost:3000/voteregister", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    })
+      .then((response) => {
+        if (response.status == 201) {
+          return response.json();
+        } else {
+          return response.json();
+        }
+      })
+      .then((json) => alert(json.message))
+      .catch((error) => {
+        if (error.response) {
+          // If the error has a response property, handle it
+          alert(error.response.message);
+        } else {
+          // Otherwise, handle other errors
+          alert(error.message);
+        }
+      });
+      
+  }
+
   return (
     <div>
       <div className=" pt-32 flex justify-center ">
@@ -11,7 +58,7 @@ export default function Voteregister() {
           <div class="text-sm font-normal mb-4 text-center text-[#1e0e4b]">
             Create account
           </div>
-          <form class="flex flex-col gap-3">
+          <form class="flex flex-col gap-3" onSubmit={handleRegister}>
             <div className=" flex  gap-10">
               <div>
                 <div class="block relative">
@@ -23,8 +70,8 @@ export default function Voteregister() {
                   </label>
                   <input
                     type="Email"
-                    id="email"
                     class="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2  ring-gray-900 outline-0"
+                    onChange={(e) => setemail(e.target.value)}
                   />
                 </div>
                 <div class="block relative">
@@ -36,8 +83,8 @@ export default function Voteregister() {
                   </label>
                   <input
                     type="text"
-                    id="email"
                     class="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2  ring-gray-900 outline-0"
+                    onChange={(e) => setfull_name(e.target.value)}
                   />
                 </div>
                 <div class="block relative">
@@ -49,8 +96,8 @@ export default function Voteregister() {
                   </label>
                   <input
                     type="text"
-                    id="username"
                     class="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2  ring-gray-900 outline-0"
+                    onChange={(e) => setusername(e.target.value)}
                   />
                 </div>
               </div>
@@ -64,8 +111,8 @@ export default function Voteregister() {
                   </label>
                   <input
                     type="number"
-                    id="email"
                     class="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2  ring-gray-900 outline-0"
+                    onChange={(e) => setmobile_no(e.target.value)}
                   />
                 </div>
                 <div class="block relative">
@@ -77,8 +124,8 @@ export default function Voteregister() {
                   </label>
                   <input
                     type="Date"
-                    id="date"
                     class="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2  ring-gray-900 outline-0"
+                    onChange={(e) => setDob(e.target.value)}
                   />
                 </div>
                 <div class="block relative">
@@ -90,8 +137,8 @@ export default function Voteregister() {
                   </label>
                   <input
                     type="text"
-                    id="email"
                     class="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2  ring-gray-900 outline-0"
+                    onChange={(e) => setgender(e.target.value)}
                   />
                 </div>
               </div>
@@ -104,9 +151,9 @@ export default function Voteregister() {
                 Password
               </label>
               <input
-                type="text"
-                id="password"
+                type="password"
                 class="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
+                onChange={(e) => setpassword(e.target.value)}
               />
             </div>
 
@@ -120,7 +167,7 @@ export default function Voteregister() {
           <div class="text-sm text-center mt-[1.6rem]">
             Already have a Account?{" "}
             <a class="text-sm text-[#7747ff]" href="#">
-              Sign in!
+              <Link to={"/voterlog"}>Sign in!</Link>
             </a>
           </div>
         </div>

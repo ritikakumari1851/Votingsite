@@ -25,7 +25,8 @@ export function MyFooter() {
     location.pathname === "/forgotpas" ||
     location.pathname === "/dashboard" ||
     location.pathname === "/Ballotbox" ||
-    location.pathname === "/candidatelist"
+    location.pathname === "/Candidatelist" ||
+    location.pathname === "/votingbox"
   ) {
     return null;
   }
