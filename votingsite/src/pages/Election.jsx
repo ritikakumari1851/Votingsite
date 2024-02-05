@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../components/Card";
 import Image from "../assets/At the office-pana.png";
+import { Link } from "react-router-dom";
 
 export default function Election() {
   return (
@@ -123,42 +124,42 @@ export default function Election() {
       <div className="flex flex-col justify-center items-center shadow-2xl mt-4 md:mt-8">
         <div className="flex flex-col md:flex-row gap-4">
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            Proffesional Assosiations
+            <Link to={'/registration'}>Proffesional Assosiations</Link>
           </button>
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            k-12 school
+          <Link to={'/registration'}>k-12 school</Link>
           </button>
         </div>
         <div className="flex flex-col md:flex-row gap-4 mt-4">
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            Union
+          <Link to={'/registration'}>Union</Link>
           </button>
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            Industry Assosiations
+          <Link to={'/registration'}>Industry Assosiations</Link>
           </button>
         </div>
         <div className="flex flex-col md:flex-row mt-4 gap-4">
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            Homeowner Assosiations
+          <Link to={'/registration'}>Homeowner Assosiations</Link> 
           </button>
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            College & Universities
+          <Link to={'/registration'}>College & Universities</Link>
           </button>
         </div>
         <div className="flex flex-col md:flex-row gap-4 mt-4">
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            NGO or Clubs
+          <Link to={'/registration'}>NGO or Clubs</Link> 
           </button>
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md  hover:text-2xlhover:translate-y-2 hover:text-white">
-            Other Organizations
+          <Link to={'/registration'}>Other Organizations</Link>
           </button>
         </div>
         <div className="flex flex-col md:flex-row gap-4 mt-4">
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            Coopretives & Credit Union
+          <Link to={'/registration'}>Coopretives & Credit Union</Link>
           </button>
           <button className="bg-gray-500 w-full md:w-[50vh] h-14 rounded-md hover:text-2xl hover:translate-y-2 hover:text-white">
-            Service Provider
+          <Link to={'/registration'}>Service Provider</Link>
           </button>
         </div>
       </div>

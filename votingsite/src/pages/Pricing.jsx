@@ -16,14 +16,7 @@ export default function Pricing() {
               Get Best deals at Best Price
             </p>
             <p className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              delectus voluptate nostrum vero beatae quibusdam labore alias ea,
-              impedit aspernatur perferendis, aut possimus quam facilis aperiam,
-              quos eveniet magnam sapiente!Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Dignissimos, ad cumque, neque
-              blanditiis incidunt eveniet ducimus magnam adipisci exercitationem
-              quia quos numquam dolore animi dolorum beatae! Libero nam dolor
-              nihil!
+            Welcome to our voting website! Exciting news – basic voting services are free! For extra flair, we offer premium features at various prices. Customize your polls with unique themes and enjoy enhanced security measures . Need extensive data storage for a bustling election? No problem, scale up at $100/month. Gain access to real-time results for $100/month. Worried about user authentication? Our top-notch package at $100/month ensures secure voting. Plus, a user-friendly design upgrade is available for $50/month. Explore our range of options to make your voting experience tailored to your needs. Upgrade today for a seamless, secure, and personalized voting journey!
             </p>
             <button className="bg-orange-400 p-4 rounded-md">
               Start Exploring
