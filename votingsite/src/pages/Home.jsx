@@ -5,6 +5,11 @@ import img1 from "../assets/Good team-pana.png";
 import img3 from "../assets/doyourself.jpg";
 import img4 from "../assets/decision.png";
 import img2 from "../assets/1.jpg";
+import img5 from"../assets/crowd.jpg";
+import img6 from"../assets/At the office-pana.png";
+import img7 from"../assets/done-for-you@2x.jpg";
+import img8 from"../assets/GoVote.png";
+
 import { Link } from "react-router-dom";
 export default function Home() {
   return (
@@ -25,10 +30,10 @@ export default function Home() {
           </p>
           <div className="flex flex-col md:flex-row md:items-center gap-4 mt-10">
             <button className="animate-bounce-slow bg-orange-600 p-4 pl-8 pr-8 font-serif text-xl text-white hover:bg-gray-900 rounded-md">
-              Start Now
+             <Link to={'/registration'}>Start Now</Link> 
             </button>
             <p className="mt-2 md:mt-0 font-sans font-semibold text-blue-900 text-lg">
-              <u>Explore Services</u>
+              <Link to={'/'}>Explore Services</Link>
             </p>
           </div>
         </div>
@@ -52,7 +57,7 @@ export default function Home() {
       </p>
       <div className="flex flex-wrap gap-3 mt-12 border-t justify-between px-44">
         <div className="w-full sm:w-1/3 md:w-1/5">
-          <Card title={"Voting"} img={img1} />
+          <Card title={""} img={img1} />
         </div>
         <div className="w-full sm:w-1/3 md:w-1/5 p-2">
           <Card title={"Voting Ad"} img={img2} />
@@ -61,19 +66,19 @@ export default function Home() {
           <Card title={"voting"} img={img3} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} img={img3} />
+          <Card title={"voting"} img={img4} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting ad"} img={img3} />
+          <Card title={"voting ad"} img={img5} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} img={img3} />
+          <Card title={""} img={img6} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting ad"} img={img3} />
+          <Card title={"voting ad"} img={img7} />
         </div>
         <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} img={img3} />
+          <Card title={"voting"} img={img8} />
         </div>
       </div>
       <p className="text-4xl text-black mt-10 text-center">

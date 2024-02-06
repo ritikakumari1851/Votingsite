@@ -22,13 +22,13 @@ export default function Election() {
         </div>
         <div className="flex flex-col md:flex-row gap-5 justify-between">
           <button className="ml-0 md:ml-32 mt-4 md:mt-0 animate-bounce-slow bg-gray-800 w-full md:w-40 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-2xl font-semibold shadow-gray-900 shadow-2xl">
-            Voter
+            <Link to={'/voterlog'}>Voter</Link>
           </button>
           <button className="mt-4 md:mt-0 bg-gray-800 animate-bounce-slow w-full md:w-52 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-xl font-semibold shadow-gray-900 shadow-2xl">
-            Administrator
+            <Link to={'/login'}>Administrator</Link>
           </button>
           <button className="mt-4 md:mt-0 mr-0 md:mr-32 animate-bounce-slow bg-gray-800 w-full md:w-40 h-16 rounded-md hover:bg-gray-950 text-gray-200 text-xl font-semibold shadow-gray-900 shadow-2xl">
-            Results
+           <Link to={'/login'}>  Results</Link>
           </button>
         </div>
         <div className="flex flex-col md:flex-row justify-between mx-4 md:mx-20">
@@ -67,7 +67,9 @@ export default function Election() {
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150  duration-700 right-20 -top-6 bg-orange-500"></div>
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8   rounded-full group-hover:scale-150  duration-700 right-32 top-6 bg-pink-500"></div>
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4   rounded-full group-hover:scale-150  duration-700 right-2 top-12 bg-red-600"></div>
-            <p class="z-10 absolute bottom-2 left-2">Explore Remote Voting</p>
+            <p class="z-10 absolute bottom-2 left-2">
+            <Link to={'/contact'}>Explore Remote Voting</Link>
+            </p>
           </button>
         </div>
         <div class=" w-2 bg-gradient-to-b from-black to-black h-auto"></div>
@@ -90,7 +92,7 @@ export default function Election() {
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8   rounded-full group-hover:scale-150  duration-700 right-32 top-6 bg-pink-500"></div>
             <div class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4   rounded-full group-hover:scale-150  duration-700 right-2 top-12 bg-red-600"></div>
             <p class="z-10 absolute bottom-2 left-2">
-              Explore In-Person Voting
+              <Link to={'/contact'}>Explore In-Person Voting</Link>
               </p>
           </button>
         </div>
