@@ -14,7 +14,7 @@ const Ballotbox = () => {
 
   const location = useLocation();
   const addCandidate = () => {
-    Axios.post("http://localhost:3000/candidate", {
+    Axios.post("https://voteonclickbackend.onrender.com/candidate", {
       full_name: full_name,
       email: email,
       phone_no: phone_no,

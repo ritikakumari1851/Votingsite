@@ -23,7 +23,7 @@ export default function Voteregister() {
       mobile_no,
       password,
     };
-    fetch("http://localhost:3000/voteregister", {
+    fetch("https://voteonclickbackend.onrender.com/voteregister", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

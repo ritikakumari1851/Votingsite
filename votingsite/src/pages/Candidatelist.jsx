@@ -5,7 +5,7 @@ const Candidatelist = () => {
   const [candidates, setCandidates] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3000/candidate")
+    Axios.get("https://voteonclickbackend.onrender.com/candidate")
       .then((response) => {
         setCandidates(response.data);
       })

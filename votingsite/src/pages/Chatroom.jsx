@@ -7,7 +7,7 @@ export default function Chatroom() {
   const [messages, setMessages] = useState([]);
   const [isJoined, setIsJoined] = useState(false);
 
-  const socket = io("http://localhost:3000", {
+  const socket = io("https://voteonclickbackend.onrender.com", {
     transports: ["websocket"],
   });
 

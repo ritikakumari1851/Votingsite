@@ -4,7 +4,7 @@ const Votingbox = () => {
   const [voted, setVoted] = useState(false);
 
   useEffect(() => {
-    Axios.get("http://localhost:3000/candidate")
+    Axios.get("https://voteonclickbackend.onrender.com/candidate")
       .then((response) => {
         setCandidates(response.data);
       })
@@ -17,7 +17,7 @@ const Votingbox = () => {
     try {
       if (!voted) {
         // Make a POST request to your backend API to submit the vote
-        const response = await Axios.post("http://localhost:3000/vote", { candidateId: candidate._id });
+        const response = await Axios.post("https://voteonclickbackend.onrender.com/vote", { candidateId: candidate._id });
 
         // If the vote was successful, set voted state to true
         setVoted(true);
