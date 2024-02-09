@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Axios from "axios";
-import { Link } from "react-router-dom";
 
 const Ballotbox = () => {
   const [full_name, setFullname] = useState("");
@@ -10,7 +10,9 @@ const Ballotbox = () => {
   const [about, setAbout] = useState("");
   const [dob, setDob] = useState("");
   const [message, setMessage] = useState("");
+  const [ballotID, setBallotID] = useState("");
 
+  const location = useLocation();
   const addCandidate = () => {
     Axios.post("http://localhost:3000/candidate", {
       full_name: full_name,
@@ -23,14 +25,13 @@ const Ballotbox = () => {
     }).then((response) => {
       if (response.status === 200) {
         alert("Candidate added successfully");
-        setSubmitted(true);
         // Reset the form fields
         setFullname("");
         setMessage("");
         setPosition("");
         setAbout("");
         setPhoneno("");
-        setDob(0 - 0 - 0);
+        setDob("");
         setEmail("");
       } else {
         alert("Error adding candidate");
@@ -38,9 +39,22 @@ const Ballotbox = () => {
     });
   };
 
+  // Extracting ballotID from location state
+  React.useEffect(() => {
+    if (location.state && location.state.ballotID) {
+      setBallotID(location.state.ballotID);
+    }
+  }, [location.state]);
+
   return (
     <div className=" flex flex-row justify-center mt-10">
       <div class="w-full max-w-[300px] bg-white rounded-lg shadow-md p-6">
+        {ballotID && (
+          <p className="text-lg font-bold text-gray-800 mb-4">
+            Ballot ID: {ballotID}
+          </p>
+        )}
+
         <h2 class="text-2xl font-bold text-gray-800 mb-4">
           Candidate Add Form
         </h2>

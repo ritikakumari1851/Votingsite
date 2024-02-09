@@ -21,7 +21,7 @@ export default function Voterlogin() {
           console.log(json.token);
           localStorage.setItem("userToken", json.token);
           alert("Login successful");
-          navigation("");
+          navigation("/Auth");
         } else {
           // Handle non-JSON responses here
           const text = await response.text();

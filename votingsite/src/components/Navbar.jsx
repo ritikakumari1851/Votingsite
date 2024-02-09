@@ -11,6 +11,7 @@ function Navbar() {
   if (
     location.pathname === "/Login" ||
     location.pathname === "/ballotbox" ||
+    location.pathname === "/Auth" ||
     location.pathname === "/profile" ||
     location.pathname === "/registration" ||
     location.pathname === "/voiting" ||
@@ -19,8 +20,9 @@ function Navbar() {
     location.pathname === "/forgotpas" ||
     location.pathname === "/dashboard" ||
     location.pathname === "/Ballotbox" ||
-    location.pathname === "/Candidatelist"||
-    location.pathname === "/votingbox"
+    location.pathname === "/Candidatelist" ||
+    location.pathname === "/votingbox" ||
+    location.pathname === "/Pricing"
   ) {
     return null;
   }
@@ -50,15 +52,15 @@ function Navbar() {
                     <Link to={"Services"}>Services</Link>
                   </p>
 
-                  <p className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                  <p className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md ">
                     <Link to={"Contact"}>Contact</Link>
                   </p>
-
+                  {/* 
                   <p className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md mr-[25vh]">
                     <Link to={"Pricing"}>Pricing</Link>
-                  </p>
+                  </p> */}
                   <Link to={"registration"}>
-                    <button className=" bg-blue-950 text-white rounded-md p-4 pl-5 pr-5 font-serif">
+                    <button className=" ml-[40vh] bg-blue-950 text-white rounded-md p-4 pr-5 font-serif">
                       Get started
                     </button>
                   </Link>
