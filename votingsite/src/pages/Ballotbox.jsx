@@ -13,7 +13,8 @@ const Ballotbox = () => {
   const [ballotID, setBallotID] = useState("");
 
   const location = useLocation();
-  const addCandidate = () => {
+  const addCandidate = (event) => {
+      event.preventDefault();
     Axios.post("https://voteonclickbackend.onrender.com/candidate", {
       full_name: full_name,
       email: email,
@@ -26,13 +27,13 @@ const Ballotbox = () => {
       if (response.status === 200) {
         alert("Candidate added successfully");
         // Reset the form fields
-        // setFullname("");
-        // setMessage("");
-        // setPosition("");
-        // setAbout("");
-        // setPhoneno("");
-        // setDob("");
-        // setEmail("");
+        setFullname("");
+        setMessage("");
+        setPosition("");
+        setAbout("");
+        setPhoneno("");
+        setDob("");
+        setEmail("");
       } else {
         alert("Error adding candidate");
       }
@@ -59,7 +60,7 @@ const Ballotbox = () => {
           Candidate Add Form
         </h2>
 
-        <form class="flex flex-col">
+        <form class="flex flex-col"onSubmit={addCandidate}>
           <input
             type="text"
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
