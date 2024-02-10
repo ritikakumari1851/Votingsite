@@ -26,13 +26,13 @@ const Ballotbox = () => {
       if (response.status === 200) {
         alert("Candidate added successfully");
         // Reset the form fields
-        setFullname("");
-        setMessage("");
-        setPosition("");
-        setAbout("");
-        setPhoneno("");
-        setDob("");
-        setEmail("");
+        // setFullname("");
+        // setMessage("");
+        // setPosition("");
+        // setAbout("");
+        // setPhoneno("");
+        // setDob("");
+        // setEmail("");
       } else {
         alert("Error adding candidate");
       }
