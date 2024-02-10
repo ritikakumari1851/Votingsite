@@ -8,6 +8,7 @@ import img4 from "../assets/checklist.png";
 import img5 from "../assets/cv (2).png";
 import img6 from "../assets/politics.png";
 import img7 from "../assets/voter.png";
+import Auth from "./Auth";
 
 export default function Ballot() {
   const [ballotID, setBallotID] = useState("");
@@ -18,7 +19,9 @@ export default function Ballot() {
   };
   const handleCreateBallot = () => {
     // Navigate to Ballotbox page and pass the entered Ballot ID as state
+  
     navigate("/Ballotbox", { state: { ballotID } });
+    return <Auth ballotID={ballotID} />;
   };
 
   return (
@@ -67,6 +70,7 @@ export default function Ballot() {
                 className="py-8 mb-2 bg-green-900 px-32 rounded-md flex text-gray-200 font-serif text-2xl items-center"
                 onClick={handleCreateBallot}
               >
+                
                 Create new Ballot
               </button>
             </div>
