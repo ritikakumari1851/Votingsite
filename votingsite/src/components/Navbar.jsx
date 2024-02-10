@@ -40,15 +40,15 @@ function Navbar() {
               </h1>
               <div className="hidden md:block">
                 <div className=" ml-[50vh] flex items-baseline gap-4 ">
-                  <p className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                  <p className=" hover:border-b-2 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
                     <Link to={"/"}>Home</Link>
                   </p>
 
-                  <p className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                  <p className=" hover:border-b-2 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
                     <Link to={"Election"}>Election</Link>
                   </p>
 
-                  <p className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                  <p className="hover:border-b-2 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
                     <Link to={"Services"}>Services</Link>
                   </p>
 
