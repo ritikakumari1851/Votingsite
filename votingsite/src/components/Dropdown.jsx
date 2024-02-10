@@ -13,7 +13,7 @@ export default function Dropdown() {
     const fetchUserData = async () => {
       try {
         // Replace the URL with your actual backend URL
-        const response = await fetch("http://localhost:3000/get-user", {
+        const response = await fetch("https://voteonclickbackend.onrender.com/get-user", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
