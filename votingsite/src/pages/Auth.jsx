@@ -1,49 +1,28 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
-export default function Auth() {
-  const [enteredID, setEnteredID] = useState("");
+const Auth = () => {
+  const [BallotId, setBallotId] = useState("");
   const navigate = useNavigate();
 
-  const handleInputChange = (event) => {
-    setEnteredID(event.target.value);
+  const handleChange = (e) => {
+    setBallotId(e.target.value);
   };
-  useEffect(() => {
-    // Retrieve the ballotID from localStorage on component mount
-    const storedBallotID = localStorage.getItem("ballotID");
-    if (storedBallotID) {
-      setBallotID(storedBallotID);
-    }
-  }, []);
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    if (enteredID === ballotID) {
-      navigate("/votingbox");
-    } else {
-      alert("Entered ID does not match the Ballot ID");
-    }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/votingbox/${BallotId}`);
   };
 
   return (
-    <div className=" ">
-      <div className="flex flex-col items-center mt-[30vh] ">
-        <form onSubmit={handleFormSubmit}>
-          <input
-            type="text"
-            placeholder="Enter Ballot ID:"
-            className="rounded-xl text-md font-serif"
-            value={enteredID}
-            onChange={handleInputChange}
-          />
-          <button
-            type="submit"
-            className="p-2 mt-4 rounded px-10 bg-green-600 hover:bg-green-900 text-md font-serif text-white"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+    <div>
+      <h2>Enter Ballot ID</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={BallotId} onChange={handleChange} />
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
-}
+};
+
+export default Auth;

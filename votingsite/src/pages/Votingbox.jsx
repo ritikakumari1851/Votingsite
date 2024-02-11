@@ -1,17 +1,22 @@
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
+import { useParams } from "react-router-dom";
+
 const Votingbox = () => {
   const [candidates, setCandidates] = useState([]);
   const [votedCandidate, setVotedCandidate] = useState(null);
   const [voted, setVoted] = useState(false);
+  const { BallotId } = useParams();
 
   useEffect(() => {
-    Axios.get("https://voteonclickbackend.onrender.com/candidate")
+    Axios.get(`https://voteonclickbackend.onrender.com/candidate?ballotId=${BallotId}`)
       .then((response) => {
         setCandidates(response.data);
       })
       .catch((error) => {
         console.log("Error fetching candidates:", error);
       });
-  }, []);
+  }, [BallotId]);
 
   const handleVote = async (candidate) => {
     try {
