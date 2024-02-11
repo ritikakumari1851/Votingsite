@@ -11,16 +11,25 @@ const Auth = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/votingbox/${BallotId}`);
+    navigate(`/Votingbox/${BallotId}`);
   };
 
   return (
     <div>
-      <h2>Enter Ballot ID</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={BallotId} onChange={handleChange} />
-        <button type="submit">Submit</button>
-      </form>
+      <div className=" flex flex-col items-center mt-[30vh]">
+        <h2 className=" font-serif">Enter Ballot ID:</h2>
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={BallotId} onChange={handleChange} />
+          <div>
+            <button
+              type="submit"
+              className=" bg-blue-800 p-2 font-serif w-full mt-2"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
