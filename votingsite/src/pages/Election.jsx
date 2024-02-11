@@ -1,6 +1,10 @@
 import React from "react";
 import Card from "../components/Card";
 import Image from "../assets/At the office-pana.png";
+import img from "../assets/pngtree-election-day-political-hand-drawn-cartoon-flat-illustration-with-voters-casting-ballots-at-polling-place-in-united-states-suitable-for-poster-or-campaign-picture-image_876245.png"
+import img1 from "../assets/decision.png"
+import img2 from "../assets/istockphoto-1267110917-612x612.jpg"
+import img3 from "../assets/vector-illustration-people-vote-online-for-candidate-on-phone-election-campaign-online-choices-political-competition-presidential-election-concept-of-2DFC2T4.jpg"
 import { Link } from "react-router-dom";
 
 export default function Election() {
@@ -102,25 +106,20 @@ export default function Election() {
       </p>
       <div className="flex flex-col md:flex-row justify-between mx-4 md:mx-10">
         {/* Adjust image paths based on your project structure */}
-        <img
+        <img src={img}
           className="w-full md:w-[30vh] h-[30vh] mb-4 md:mb-0"
-          src="..\src\assets\pngtree-election-day-political-hand-drawn-cartoon-flat-illustration-with-voters-casting-ballots-at-polling-place-in-united-states-suitable-for-poster-or-campaign-picture-image_876245.png"
-          alt="Image1"
         />
-        <img
+        <img src={img1}
           className="w-full md:w-[30vh] h-[30vh] mb-4 md:mb-0"
-          src="..\src\assets\decision.png"
-          alt="Image2"
+        
         />
-        <img
+        <img src={img2}
           className="w-full md:w-[30vh] h-[30vh] mb-4 md:mb-0"
-          src="..\src\assets\istockphoto-1267110917-612x612.jpg"
-          alt="Image3"
+          
         />
-        <img
+        <img src={img3}
           className="w-full md:w-[30vh] h-[30vh]"
-          src="..\src\assets\vector-illustration-people-vote-online-for-candidate-on-phone-election-campaign-online-choices-political-competition-presidential-election-concept-of-2DFC2T4.jpg"
-          alt="Image4"
+         
         />
       </div>
       <div className="flex flex-col justify-center items-center shadow-2xl mt-4 md:mt-8">
