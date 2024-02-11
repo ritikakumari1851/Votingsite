@@ -12,27 +12,6 @@ import img7 from "../assets/voter.png";
 import Auth from "./Auth";
 
 export default function Ballot() {
-  const [ballotID, setBallotID] = useState("");
-  const navigate = useNavigate();
-  useEffect(() => {
-    // Retrieve the ballotID from localStorage on component mount
-    const storedBallotID = localStorage.getItem("ballotID");
-    if (storedBallotID) {
-      setBallotID(storedBallotID);
-    }
-  }, []);
-  const handleInputChange = (event) => {
-    setBallotID(event.target.value);
-  };
-  const handleCreateBallot = () => {
-    // Navigate to Ballotbox page and pass the entered Ballot ID as state
-  
-    navigate("/Ballotbox", { state: { ballotID } });
-    localStorage.setItem("ballotID", ballotID);
-    // Pass the ballotID as a prop to the Ballotbox component
-    return <Auth ballotID={ballotID} />;
-  };
-
   return (
     <div className="  ">
       <div>
@@ -65,16 +44,7 @@ export default function Ballot() {
           <div className="flex mt-[10vh] justify-between">
             <img src={img1} className="size-32" />
             <div className=" flex flex-col gap-2">
-              <label htmlFor="">
-                Voters Can access this Ballot only using This ID,{" "}
-                <p>You can change the id When the Session ends</p>
-              </label>
-              <input
-                type="text"
-                placeholder=" Create Ballot ID"
-                value={ballotID}
-                onChange={handleInputChange}
-              />
+              
                <button
                 className="py-8 mb-2 bg-green-900 px-32 rounded-md flex text-gray-200 font-serif text-2xl items-center"
                 onClick={handleCreateBallot}
