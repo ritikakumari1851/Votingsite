@@ -8,7 +8,7 @@ export default function Login() {
   function handlelogin(e) {
     e.preventDefault();
     const body = { email, password };
-    fetch("http://localhost:3000/login", {
+    fetch("https://voteonclickbackend.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

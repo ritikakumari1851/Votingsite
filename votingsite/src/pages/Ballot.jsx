@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Dashnav from "../components/Dashnav";
 import img1 from "../assets/hand-holding-ballot-paper-voting-600nw-2367185457.webp";
 import img2 from "../assets/hand-voting-ballot-box-icon-260nw-2277558977.webp";
@@ -9,11 +9,9 @@ import img4 from "../assets/checklist.png";
 import img5 from "../assets/cv (2).png";
 import img6 from "../assets/politics.png";
 import img7 from "../assets/voter.png";
+import Auth from "./Auth";
 
 export default function Ballot() {
-  const [showInput, setShowInput] = useState(false);
-  const navigate = useNavigate();
-
   return (
     <div className="  ">
       <div>
@@ -45,10 +43,16 @@ export default function Ballot() {
           </div>
           <div className="flex mt-[10vh] justify-between">
             <img src={img1} className="size-32" />
-            <button className="py-8 mb-2 bg-green-900 px-32 rounded-md flex text-gray-200 font-serif text-2xl items-center">
-              <Link to="/Ballotbox">Create new Ballot</Link>
-            </button>
-
+            <div className=" flex flex-col gap-2">
+              
+               <button
+                className="py-8 mb-2 bg-green-900 px-32 rounded-md flex text-gray-200 font-serif text-2xl items-center"
+                onClick={handleCreateBallot}
+              >
+                
+                Create new Ballot
+              </button>
+            </div>
             <img src={img2} className="size-32" />
           </div>
         </div>

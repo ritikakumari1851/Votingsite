@@ -5,10 +5,10 @@ import img1 from "../assets/Good team-pana.png";
 import img3 from "../assets/doyourself.jpg";
 import img4 from "../assets/decision.png";
 import img2 from "../assets/1.jpg";
-import img5 from"../assets/crowd.jpg";
-import img6 from"../assets/At the office-pana.png";
-import img7 from"../assets/done-for-you@2x.jpg";
-import img8 from"../assets/GoVote.png";
+import img5 from "../assets/crowd.jpg";
+import img6 from "../assets/At the office-pana.png";
+import img7 from "../assets/done-for-you@2x.jpg";
+import img8 from "../assets/GoVote.png";
 
 import { Link } from "react-router-dom";
 export default function Home() {
@@ -30,10 +30,10 @@ export default function Home() {
           </p>
           <div className="flex flex-col md:flex-row md:items-center gap-4 mt-10">
             <button className="animate-bounce-slow bg-orange-600 p-4 pl-8 pr-8 font-serif text-xl text-white hover:bg-gray-900 rounded-md">
-             <Link to={'/registration'}>Start Now</Link> 
+              <Link to={"/registration"}>Start Now</Link>
             </button>
             <p className="mt-2 md:mt-0 font-sans font-semibold text-blue-900 text-lg">
-              <Link to={'/'}>Explore Services</Link>
+              <Link to={"/"}>Explore Services</Link>
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function Home() {
         <Slider />
       </div>
       <div className="mt-12 text-4xl text-black font-bold text-center border-t">
-        <p className="pt-8">Types of Elections You Can Organize</p>
+        <p className="pt-8 font-serif">Types of Elections You Can Organize</p>
         <p className="text-black text-3xl mt-4 font-medium">
           Cast Your Vote To.
         </p>
@@ -55,36 +55,40 @@ export default function Home() {
         administrators. All the candidates are to be assigned by the admin
         randomly and voters can register themself for voting by logging in.
       </p>
-      <div className="flex flex-wrap gap-3 mt-12 border-t justify-between px-44">
-        <div className="w-full sm:w-1/3 md:w-1/5">
-          <Card title={""} img={img1} />
+      <div className="flex flex-wrap gap-3 mt-12 border-t justify-between px-4 sm:px-10 lg:px-20">
+        <div className="w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img1} />
         </div>
-        <div className="w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"Voting Ad"} img={img2} />
+        <div className="w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img2} />
         </div>
-        <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} img={img3} />
+        <div className=" w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img3} />
         </div>
-        <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} img={img4} />
+        <div className=" w-full sm:w-1/2 md:w-1/4 mb-10 ">
+          <Card img={img4} />
         </div>
-        <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting ad"} img={img5} />
+        <div className=" w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img5} />
         </div>
-        <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={""} img={img6} />
+        <div className=" w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img6} />
         </div>
-        <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting ad"} img={img7} />
+        <div className=" w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img7} />
         </div>
-        <div className=" w-full sm:w-1/3 md:w-1/5 p-2">
-          <Card title={"voting"} img={img8} />
+        <div className=" w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img8} />
+        </div>
+        <div className=" w-full sm:w-1/2 md:w-1/4 mb-10">
+          <Card img={img4} />
         </div>
       </div>
-      <p className="text-4xl text-black mt-10 text-center">
+      <div>
+      <p className="text-4xl text-black mt-20 text-center font-serif">
         Take Your Vote To the Next Level with Us
       </p>
-      <div className="flex flex-col md:flex-row justify-between h-80 w-full border bg-orange-600 md:p-10 mt-5">
+      <div className="flex flex-col md:flex-row justify-between h-80 w-full border bg-orange-400 md:p-10 mt-5">
         <div className=" flex flex-col">
           <div className=" text-4xl text-black  p-5"> Boost Engagement </div>
           <div className=" text-white font-semibold text-lg md:w-full mr-3 ">
@@ -181,7 +185,7 @@ export default function Home() {
         </p>
       </div>
       <body class="font-sans flex flex-row bg-gray-100">
-        <div class="flex flex-col font-bold font-serif items-center justify-center h-auto bg-orange-600">
+        <div class="flex flex-col font-bold font-serif items-center justify-center h-auto bg-orange-400">
           <div class="text-black text-3xl mt-5">Set Up Voting Yourself</div>
           <br />
           <p className=" text-white text-lg font-normal ml-5">
@@ -225,7 +229,7 @@ export default function Home() {
                 </svg>
               </span>
               <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-                <Link to={'/pricing'}>Get Product & Price</Link>
+                <Link to={"/pricing"}>Get Product & Price</Link>
               </span>
             </div>
           </div>
@@ -233,7 +237,7 @@ export default function Home() {
 
         <div class=" w-4 bg-gradient-to-b from-yellow-300 via-green-400 to-yellow-300 h-auto"></div>
 
-        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-orange-600">
+        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-orange-400">
           <div class="text-black text-3xl mt-5  ">Voting Experts Can Help</div>
           <br />
           <p className=" text-white text-lg font-normal ml-5">
@@ -277,14 +281,14 @@ export default function Home() {
                 </svg>
               </span>
               <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-              <Link to={'/pricing'}>Get Product & Price</Link>
+                <Link to={"/pricing"}>Get Product & Price</Link>
               </span>
             </div>
           </div>
         </div>
         <div class="w-4 bg-gradient-to-b from-blue-500 via-green-400 to-blue-500 h-auto"></div>
 
-        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-orange-600">
+        <div class="flex flex-col font-bold  font-serif items-center justify-center h-auto bg-orange-400">
           <div class="text-black text-3xl mt-5">We Do Your Voting Setup</div>{" "}
           <br />
           <p className=" text-white text-lg font-normal ml-5">
@@ -328,12 +332,13 @@ export default function Home() {
                 </svg>
               </span>
               <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
-              <Link to={'/pricing'}>Get Product & Price</Link>
+                <Link to={"/login"}>Get Product & Price</Link>
               </span>
             </div>
           </div>
         </div>
       </body>
+    </div>
     </div>
   );
 }

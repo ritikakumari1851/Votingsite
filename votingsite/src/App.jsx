@@ -24,6 +24,7 @@ import Candidatelist from "./pages/Candidatelist";
 import Voterlogin from "./pages/Voterlogin";
 import Voteregister from "./pages/Voteregister";
 import Votingbox from "./pages/Votingbox";
+import Auth from "./pages/Auth";
 
 function App() {
   if (analytics) {
@@ -59,6 +60,7 @@ function App() {
           <Route path="/voterlog" element={<Voterlogin />} />
           <Route path="/voteregister" element={<Voteregister />} />
           <Route path="/votingbox" element={<Votingbox/>} />
+          {loggedIn && <Route path="/Auth" element={<Auth/>} />}
           {loggedIn && <Route path="/dashboard" element={<Dashboard />} />}
         </Routes>
         <MyFooter />

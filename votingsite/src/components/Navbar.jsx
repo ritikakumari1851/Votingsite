@@ -11,6 +11,7 @@ function Navbar() {
   if (
     location.pathname === "/Login" ||
     location.pathname === "/ballotbox" ||
+    location.pathname === "/Auth" ||
     location.pathname === "/profile" ||
     location.pathname === "/registration" ||
     location.pathname === "/voiting" ||
@@ -19,8 +20,9 @@ function Navbar() {
     location.pathname === "/forgotpas" ||
     location.pathname === "/dashboard" ||
     location.pathname === "/Ballotbox" ||
-    location.pathname === "/Candidatelist"||
-    location.pathname === "/votingbox"
+    location.pathname === "/Candidatelist" ||
+    location.pathname === "/votingbox" ||
+    location.pathname === "/Pricing"
   ) {
     return null;
   }
@@ -31,34 +33,34 @@ function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img className="h-14 w-14 rounded-full mr-3" src={img} alt="" />
+                <img className="h-14 w-14 rounded-full" src={img} alt="" />
               </div>
               <h1 className=" text-center font-display font-bold text-xl text-orange-800">
                 OnClick
               </h1>
               <div className="hidden md:block">
-                <div className=" ml-[50vh] flex items-baseline gap-4 ">
-                  <p className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                <div className=" ml-[50vh] flex items-baseline gap-4 pl-16 ">
+                  <p className=" hover:border-b-2 hover:text-blue-950 hover:border-b-blue-950 text-gray-500 font-serif   text-md">
                     <Link to={"/"}>Home</Link>
                   </p>
 
-                  <p className=" hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                  <p className=" hover:border-b-2 hover:border-b-blue-950 text-gray-500 font-serif   text-md">
                     <Link to={"Election"}>Election</Link>
                   </p>
 
-                  <p className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                  <p className="hover:border-b-2 hover:border-b-blue-950 text-gray-500 font-serif   text-md">
                     <Link to={"Services"}>Services</Link>
                   </p>
 
-                  <p className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md border-r">
+                  <p className="hover:border-b-2 hover:border-b-blue-950 text-gray-500 font-serif   text-md ">
                     <Link to={"Contact"}>Contact</Link>
                   </p>
-
+                  {/* 
                   <p className="hover:border-b-2 hover:p-3 hover:border-b-blue-950 pr-4 text-gray-500 font-serif   text-md mr-[25vh]">
                     <Link to={"Pricing"}>Pricing</Link>
-                  </p>
+                  </p> */}
                   <Link to={"registration"}>
-                    <button className=" bg-blue-950 text-white rounded-md p-4 pl-5 pr-5 font-serif">
+                    <button className=" ml-[40vh] bg-blue-950 text-white rounded-md p-4 pr-5 font-serif">
                       Get started
                     </button>
                   </Link>

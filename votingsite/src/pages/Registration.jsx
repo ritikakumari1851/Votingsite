@@ -12,7 +12,7 @@ export default function Registration() {
   function handleRegister(e) {
     e.preventDefault();
     const body = { full_name, email, username, Dob, gender, password };
-    fetch("http://localhost:3000/register", {
+    fetch("https://voteonclickbackend.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -8,7 +8,7 @@ export default function Voterlogin() {
   function handlelogin(e) {
     e.preventDefault();
     const body = { email, password };
-    fetch("http://localhost:3000/voterlogin", {
+    fetch("https://voteonclickbackend.onrender.com/voterlogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export default function Voterlogin() {
           console.log(json.token);
           localStorage.setItem("userToken", json.token);
           alert("Login successful");
-          navigation("");
+          navigation("/Auth");
         } else {
           // Handle non-JSON responses here
           const text = await response.text();

@@ -45,7 +45,7 @@ export default function Dashnav() {
                 </Link>
               </p>
               <p className=" pt-4 pb-4 hover:bg-blue-950 hover:text-white">
-                <Link to={"/pricing"} className="flex items-center">
+                <Link to={"/Pricing"} className="flex items-center">
                   <img src={img2} alt="" className="w-8 h-8 mr-2 ml-2" />
                   Pricing
                 </Link>
