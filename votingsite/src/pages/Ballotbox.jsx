@@ -12,7 +12,6 @@ const Ballotbox = () => {
   const [message, setMessage] = useState("");
   const [BallotID, setBallotID] = useState("");
 
-  const location = useLocation();
   const addCandidate = (event) => {
     event.preventDefault();
     Axios.post("https://voteonclickbackend.onrender.com/candidate", {
@@ -28,35 +27,14 @@ const Ballotbox = () => {
       if (response.status === 200) {
         alert("Candidate added successfully");
         // Reset the form fields
-        setFullname("");
-        setMessage("");
-        setPosition("");
-        setAbout("");
-        setPhoneno("");
-        setDob("");
-        setEmail("");
-        setBallotID("");
       } else {
         alert("Error adding candidate");
       }
     });
   };
-
-  // Extracting ballotID from location state
-  React.useEffect(() => {
-    if (location.state && location.state.ballotID) {
-      setBallotID(location.state.ballotID);
-    }
-  }, [location.state]);
-
   return (
     <div className=" flex flex-row justify-center mt-10">
       <div class="w-full max-w-[300px] bg-white rounded-lg shadow-md p-6">
-        {ballotID && (
-          <p className="text-lg font-bold text-gray-800 mb-4">
-            Ballot ID: {ballotID}
-          </p>
-        )}
 
         <h2 class="text-2xl font-bold text-gray-800 mb-4">
           Candidate Add Form
