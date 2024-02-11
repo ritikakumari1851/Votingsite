@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Dashnav from "../components/Dashnav";
 import img1 from "../assets/hand-holding-ballot-paper-voting-600nw-2367185457.webp";
@@ -9,7 +8,6 @@ import img4 from "../assets/checklist.png";
 import img5 from "../assets/cv (2).png";
 import img6 from "../assets/politics.png";
 import img7 from "../assets/voter.png";
-import Auth from "./Auth";
 
 export default function Ballot() {
   return (
