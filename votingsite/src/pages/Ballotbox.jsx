@@ -10,11 +10,11 @@ const Ballotbox = () => {
   const [about, setAbout] = useState("");
   const [dob, setDob] = useState("");
   const [message, setMessage] = useState("");
-  const [ballotID, setBallotID] = useState("");
+  const [BallotID, setBallotID] = useState("");
 
   const location = useLocation();
   const addCandidate = (event) => {
-      event.preventDefault();
+    event.preventDefault();
     Axios.post("https://voteonclickbackend.onrender.com/candidate", {
       full_name: full_name,
       email: email,
@@ -23,6 +23,7 @@ const Ballotbox = () => {
       about: about,
       dob: dob,
       message: message,
+      BallotID: BallotID
     }).then((response) => {
       if (response.status === 200) {
         alert("Candidate added successfully");
@@ -34,6 +35,7 @@ const Ballotbox = () => {
         setPhoneno("");
         setDob("");
         setEmail("");
+        setBallotID("");
       } else {
         alert("Error adding candidate");
       }
@@ -60,7 +62,7 @@ const Ballotbox = () => {
           Candidate Add Form
         </h2>
 
-        <form class="flex flex-col"onSubmit={addCandidate}>
+        <form class="flex flex-col" onSubmit={addCandidate}>
           <input
             type="text"
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
@@ -102,6 +104,12 @@ const Ballotbox = () => {
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Message"
             onChange={(event) => setMessage(event.target.value)}
+          />
+          <input
+            type="number"
+            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+            placeholder="Ballot no."
+            onChange={(event) => setBallotID(event.target.value)}
           />
 
           <button

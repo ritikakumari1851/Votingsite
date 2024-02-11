@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-
 const Candidatelist = () => {
   const [candidates, setCandidates] = useState([]);
-
   useEffect(() => {
     Axios.get("https://voteonclickbackend.onrender.com/candidate")
       .then((response) => {
@@ -13,7 +11,6 @@ const Candidatelist = () => {
         console.log("Error fetching candidates");
       });
   }, []);
-
   return (
     <div>
       <h2>Candidate List</h2>
@@ -27,6 +24,5 @@ const Candidatelist = () => {
     </div>
   );
 };
-
 export default Candidatelist;
 
