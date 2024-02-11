@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Auth({ ballotID }) {
+export default function Auth() {
   const [enteredID, setEnteredID] = useState("");
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     setEnteredID(event.target.value);
   };
-
+  useEffect(() => {
+    // Retrieve the ballotID from localStorage on component mount
+    const storedBallotID = localStorage.getItem("ballotID");
+    if (storedBallotID) {
+      setBallotID(storedBallotID);
+    }
+  }, []);
   const handleFormSubmit = (event) => {
     event.preventDefault();
     if (enteredID === ballotID) {

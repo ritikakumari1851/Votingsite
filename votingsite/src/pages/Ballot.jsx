@@ -13,7 +13,13 @@ import Auth from "./Auth";
 export default function Ballot() {
   const [ballotID, setBallotID] = useState("");
   const navigate = useNavigate();
-
+  useEffect(() => {
+    // Retrieve the ballotID from localStorage on component mount
+    const storedBallotID = localStorage.getItem("ballotID");
+    if (storedBallotID) {
+      setBallotID(storedBallotID);
+    }
+  }, []);
   const handleInputChange = (event) => {
     setBallotID(event.target.value);
   };
@@ -21,6 +27,8 @@ export default function Ballot() {
     // Navigate to Ballotbox page and pass the entered Ballot ID as state
   
     navigate("/Ballotbox", { state: { ballotID } });
+    localStorage.setItem("ballotID", ballotID);
+    // Pass the ballotID as a prop to the Ballotbox component
     return <Auth ballotID={ballotID} />;
   };
 
