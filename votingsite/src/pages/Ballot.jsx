@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Dashnav from "../components/Dashnav";
 import img1 from "../assets/hand-holding-ballot-paper-voting-600nw-2367185457.webp";
