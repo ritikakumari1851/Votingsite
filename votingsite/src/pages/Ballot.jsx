@@ -47,10 +47,11 @@ export default function Ballot() {
               
                <button
                 className="py-8 mb-2 bg-green-900 px-32 rounded-md flex text-gray-200 font-serif text-2xl items-center"
-                onClick={handleCreateBallot}
-              >
                 
+              >
+                <Link to={"/ballotbox"}>
                 Create new Ballot
+                </Link>
               </button>
             </div>
             <img src={img2} className="size-32" />
