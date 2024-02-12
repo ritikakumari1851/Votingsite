@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Axios from "axios";
 
 const Ballotbox = () => {
-  const [full_Name, setFullName] = useState("");
+  const [full_name, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [mobile_no, setMobile_no] = useState("");
   const [position, setPosition] = useState("");
@@ -15,7 +15,7 @@ const Ballotbox = () => {
   const addCandidate = (event) => {
     event.preventDefault();
     Axios.post("https://voteonclickbackend.onrender.com/candidate", {
-      full_name: full_Name,
+      full_name: full_name,
       email: email,
       mobile_no: mobile_no,
       position: position,
@@ -45,7 +45,7 @@ const Ballotbox = () => {
             type="text"
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Full Name"
-            onChange={(event) => setFullName(event.target.value)}
+            onChange={(event) => setFullname(event.target.value)}
           />
           <input
             type="email"
