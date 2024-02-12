@@ -14,21 +14,34 @@ const Candidatelist = () => {
     console.log("Submitting form with ballotId:", ballotId);
     try {
       // Fetch candidates based on the entered ballot ID
-      const response = await Axios.get(`https://voteonclickbackend.onrender.com/candidate?BallotId=${ballotId}`);
+      const response = await Axios.get(
+        `https://voteonclickbackend.onrender.com/candidate?BallotId=${ballotId}`
+      );
       console.log("Response:", response.data);
       setCandidates(response.data);
     } catch (error) {
       console.error("Error fetching candidates:", error.message);
     }
   };
-  
 
   return (
     <div>
-      <h2>Enter Ballot ID</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={ballotId} onChange={handleInputChange} />
-        <button type="submit">Submit</button>
+      <form onSubmit={handleSubmit} className=" mt-5 ml-2">
+        <div className=" flex flex-col">
+          <div className="">
+            <input
+              type="text"
+              value={ballotId}
+              onChange={handleInputChange}
+              placeholder=" Enter Ballot ID:"
+            />
+          </div>
+          <div className="ml-[10vh] mt-2">
+            <button type="submit" className=" bg-green-800 p-2 rounded">
+              Submit
+            </button>
+          </div>
+        </div>
       </form>
       {candidates.length > 0 && (
         <div>
