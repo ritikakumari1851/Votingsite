@@ -3,26 +3,26 @@ import { Link, useLocation } from "react-router-dom";
 import Axios from "axios";
 
 const Ballotbox = () => {
-  const [full_name, setFullname] = useState("");
+  const [full_Name, setFullName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone_no, setPhoneno] = useState("");
+  const [mobile_no, setMobile_no] = useState("");
   const [position, setPosition] = useState("");
   const [about, setAbout] = useState("");
   const [dob, setDob] = useState("");
   const [message, setMessage] = useState("");
-  const [BallotID, setBallotID] = useState("");
+  const [BallotId, setBallotId] = useState("");
 
   const addCandidate = (event) => {
     event.preventDefault();
     Axios.post("https://voteonclickbackend.onrender.com/candidate", {
-      full_name: full_name,
+      full_name: full_Name,
       email: email,
-      phone_no: phone_no,
+      mobile_no: mobile_no,
       position: position,
       about: about,
       dob: dob,
       message: message,
-      BallotID: BallotID
+      BallotId: BallotId
     }).then((response) => {
       if (response.status === 200) {
         alert("Candidate added successfully");
@@ -45,7 +45,7 @@ const Ballotbox = () => {
             type="text"
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Full Name"
-            onChange={(event) => setFullname(event.target.value)}
+            onChange={(event) => setFullName(event.target.value)}
           />
           <input
             type="email"
@@ -57,7 +57,7 @@ const Ballotbox = () => {
             type="tel"
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Phone Number"
-            onChange={(event) => setPhoneno(event.target.value)}
+            onChange={(event) => setMobile_no(event.target.value)}
           />
           <input
             type="text"
@@ -87,7 +87,7 @@ const Ballotbox = () => {
             type="number"
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Ballot no."
-            onChange={(event) => setBallotID(event.target.value)}
+            onChange={(event) => setBallotId(event.target.value)}
           />
 
           <button
