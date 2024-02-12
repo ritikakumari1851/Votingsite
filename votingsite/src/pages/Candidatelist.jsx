@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 
 const Candidatelist = () => {
-  const [ballotId, setBallotId] = useState("");
+  const [BallotId, setBallotId] = useState("");
   const [candidates, setCandidates] = useState([]);
 
   const handleInputChange = (event) => {
@@ -11,11 +11,11 @@ const Candidatelist = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Submitting form with ballotId:", ballotId);
+    console.log("Submitting form with ballotId:", BallotId);
     try {
       // Fetch candidates based on the entered ballot ID
       const response = await Axios.get(
-        `https://voteonclickbackend.onrender.com/candidate?BallotId=${ballotId}`
+        `https://voteonclickbackend.onrender.com/candidate?BallotId=${BallotId}`
       );
       console.log("Response:", response.data);
       setCandidates(response.data);
@@ -31,7 +31,7 @@ const Candidatelist = () => {
           <div className="">
             <input
               type="text"
-              value={ballotId}
+              value={BallotId}
               onChange={handleInputChange}
               placeholder=" Enter Ballot ID:"
             />
