@@ -9,7 +9,8 @@ const Votingbox = () => {
   const { BallotId } = useParams();
 
   useEffect(() => {
-    Axios.get(`https://voteonclickbackend.onrender.com/candidate?ballotId=${BallotId}`)
+    console.log("BallotId:", BallotId); // Log the BallotId before making the request
+    Axios.get(`https://voteonclickbackend.onrender.com/candidate?BallotId=${BallotId}`)
       .then((response) => {
         setCandidates(response.data);
       })
@@ -17,6 +18,7 @@ const Votingbox = () => {
         console.log("Error fetching candidates:", error);
       });
   }, [BallotId]);
+  
 
   const handleVote = async (candidate) => {
     try {

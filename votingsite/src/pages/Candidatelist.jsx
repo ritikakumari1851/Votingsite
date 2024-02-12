@@ -17,7 +17,7 @@ const Candidatelist = () => {
       <ul>
         {candidates.map((candidate) => (
           <li key={candidate._id}>
-            {candidate.full_name} - {candidate.email} - {candidate.position} - {candidate.about} - {candidate.dob} -{candidate.message}
+            {candidate.full_Name} - {candidate.email} - {candidate.position} - {candidate.about} - {candidate.dob} -{candidate.message} - {candidate.BallotId}
           </li>
         ))}
       </ul>
