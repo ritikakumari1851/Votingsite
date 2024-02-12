@@ -4,6 +4,7 @@ import Axios from "axios";
 
 const Ballotbox = () => {
   const [full_name, setFullname] = useState("");
+  const [Name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile_no, setMobile_no] = useState("");
   const [position, setPosition] = useState("");
@@ -16,13 +17,14 @@ const Ballotbox = () => {
     event.preventDefault();
     Axios.post("https://voteonclickbackend.onrender.com/candidate", {
       full_name: full_name,
+      Name: Name,
       email: email,
       mobile_no: mobile_no,
       position: position,
       about: about,
       dob: dob,
       message: message,
-      BallotId: BallotId
+      BallotId: BallotId,
     }).then((response) => {
       if (response.status === 200) {
         alert("Candidate added successfully");
@@ -35,7 +37,6 @@ const Ballotbox = () => {
   return (
     <div className=" flex flex-row justify-center mt-10">
       <div class="w-full max-w-[300px] bg-white rounded-lg shadow-md p-6">
-
         <h2 class="text-2xl font-bold text-gray-800 mb-4">
           Candidate Add Form
         </h2>
@@ -46,6 +47,12 @@ const Ballotbox = () => {
             class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Full Name"
             onChange={(event) => setFullname(event.target.value)}
+          />
+          <input
+            type="text"
+            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+            placeholder="Name"
+            onChange={(event) => setName(event.target.value)}
           />
           <input
             type="email"
