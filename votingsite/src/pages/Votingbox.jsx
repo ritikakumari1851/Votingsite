@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 
 const Votingbox = () => {
   const [candidates, setCandidates] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [votedCandidates, setVotedCandidates] = useState([]);
+  // const [loading, setLoading] = useState(false);
+  // const [votedCandidates, setVotedCandidates] = useState([]);
   const { ballotId } = useParams();
 
   useEffect(() => {
@@ -24,20 +24,20 @@ const Votingbox = () => {
     fetchCandidates();
   }, [ballotId]);
 
-  const handleVote = async (candidateId) => {
-    try {
-      const token = localStorage.getItem("token"); // Retrieve token from local storage
-      const response = await Axios.post(
-        "https://voteonclickbackend.onrender.com/vote",
-        { candidateId },
-        { headers: { Authorization: `Bearer ${token}` } } // Include token in the headers
-      );
-      console.log("Vote submitted successfully:", response.data);
-      setVotedCandidates([...votedCandidates, candidateId]);
-    } catch (error) {
-      console.error("Error submitting vote:", error.message);
-    }
-  };
+  // const handleVote = async (candidateId) => {
+  //   try {
+  //     const token = localStorage.getItem("token"); // Retrieve token from local storage
+  //     const response = await Axios.post(
+  //       "https://voteonclickbackend.onrender.com/vote",
+  //       { candidateId },
+  //       { headers: { Authorization: `Bearer ${token}` } } // Include token in the headers
+  //     );
+  //     console.log("Vote submitted successfully:", response.data);
+  //     setVotedCandidates([...votedCandidates, candidateId]);
+  //   } catch (error) {
+  //     console.error("Error submitting vote:", error.message);
+  //   }
+  // };
 
   return (
     <div className="bg-blue-200">
@@ -61,11 +61,11 @@ const Votingbox = () => {
                 <h3>MESSAGE: {candidate.message}</h3>
                 <h3>Candidate_id: {candidate._id}</h3>
                 <button
-                  onClick={() => handleVote(candidate._id)}
-                  className="bg-blue-900 py-2 px-10 rounded-xl text-white"
-                  disabled={votedCandidates.includes(candidate._id)}
+                  // onClick={() => handleVote(candidate._id)}
+                  // className="bg-blue-900 py-2 px-10 rounded-xl text-white"
+                  // disabled={votedCandidates.includes(candidate._id)}
                 >
-                  {votedCandidates.includes(candidate._id) ? "Voted" : "Vote"}
+                  {/* {votedCandidates.includes(candidate._id) ? "Voted" : "Vote"} */}
                 </button>
               </div>
             </li>
