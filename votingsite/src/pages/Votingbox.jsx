@@ -47,9 +47,6 @@ const Votingbox = () => {
       <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
         Welcome To the BallotBox
       </h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
         <ul>
           {candidates.map((candidate) => (
             <li key={candidate._id} className="flex justify-between">
@@ -71,7 +68,7 @@ const Votingbox = () => {
             </li>
           ))}
         </ul>
-      )}
+     
     </div>
   );
 };
