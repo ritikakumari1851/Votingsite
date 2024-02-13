@@ -4,14 +4,14 @@ import { useParams } from "react-router-dom";
 
 const Votingbox = () => {
   const [candidates, setCandidates] = useState([]);
-  const { ballotId } = useParams(); // Get ballotId from URL params
+  const { BallotId } = useParams(); // Get ballotId from URL params
 
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
         // Fetch candidates based on the entered ballot ID
         const response = await Axios.get(
-          `https://voteonclickbackend.onrender.com/candidate?BallotId=${ballotId}`
+          `https://voteonclickbackend.onrender.com/candidate?BallotId=${BallotId}`
         );
         console.log("Response:", response.data);
         setCandidates(response.data);
@@ -21,12 +21,12 @@ const Votingbox = () => {
     };
 
     fetchCandidates(); // Call the fetchCandidates function when the component mounts
-  }, [ballotId]); // Add ballotId to dependency array to fetch candidates when it changes
+  }, [BallotId]); // Add ballotId to dependency array to fetch candidates when it changes
 
   return (
     <div className="bg-blue-200">
       <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
-        Ballot ID: {ballotId}
+        Ballot ID: {BallotId}
       </h2>
       <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
         Welcome To the BallotBox
