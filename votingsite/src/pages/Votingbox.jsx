@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 const Votingbox = () => {
   const [candidates, setCandidates] = useState([]);
+  const [votedCandidates, setVotedCandidates] = useState([]);
   const { BallotId } = useParams(); // Get ballotId from URL params
 
   useEffect(() => {
@@ -23,6 +24,28 @@ const Votingbox = () => {
     fetchCandidates(); // Call the fetchCandidates function when the component mounts
   }, [BallotId]); // Add ballotId to dependency array to fetch candidates when it changes
 
+  const handleVote = async (candidateId) => {
+    try {
+      // Get token from local storage or wherever it's stored after login
+      const token = localStorage.getItem("token");
+
+      // Submit the vote with the token in the request headers
+      await Axios.post("https://voteonclickbackend.onrender.com/vote", {
+        voterId: "voterId", // replace with actual voterId
+        candidateId: candidateId,
+      }, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      // Update votedCandidates state to mark this candidate as voted
+      setVotedCandidates([...votedCandidates, candidateId]);
+    } catch (error) {
+      console.error("Error submitting vote:", error.message);
+    }
+  };
+
   return (
     <div className="bg-blue-200">
       <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
@@ -41,8 +64,12 @@ const Votingbox = () => {
               <h3>DOB: {candidate.dob}</h3>
               <h3>MESSAGE: {candidate.message}</h3>
               <h3>Candidate_id: {candidate._id}</h3>
-              <button className=" bg-blue-900 p-2 px-8 rounded-lg text-white">
-                VOTE
+              <button
+                className="bg-blue-900 p-2 px-8 rounded-lg text-white"
+                onClick={() => handleVote(candidate._id)}
+                disabled={votedCandidates.includes(candidate._id)}
+              >
+                {votedCandidates.includes(candidate._id) ? "Voted" : "Vote"}
               </button>
             </div>
           </li>
