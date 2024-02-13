@@ -41,7 +41,9 @@ const Votingbox = () => {
               <h3>DOB: {candidate.dob}</h3>
               <h3>MESSAGE: {candidate.message}</h3>
               <h3>Candidate_id: {candidate._id}</h3>
-              <button>VOTE</button>
+              <button className=" bg-blue-900 p-2 px-8 rounded-lg text-white">
+                VOTE
+              </button>
             </div>
           </li>
         ))}
