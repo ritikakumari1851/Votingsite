@@ -27,6 +27,9 @@ const Votingbox = () => {
   return (
     <div className="bg-blue-200">
       <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
+        Ballot ID: {ballotId}
+      </h2>
+      <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
         Welcome To the BallotBox
       </h2>
       {loading ? (
