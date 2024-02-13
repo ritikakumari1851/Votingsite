@@ -6,6 +6,7 @@ const Votingbox = () => {
   const [candidates, setCandidates] = useState([]);
   const [votedCandidates, setVotedCandidates] = useState([]);
   const { BallotId } = useParams(); // Get ballotId from URL params
+  const voterId = localStorage.getItem("voterId"); // Retrieve voterId from localStorage
 
   useEffect(() => {
     const fetchCandidates = async () => {
@@ -23,20 +24,13 @@ const Votingbox = () => {
 
     fetchCandidates(); // Call the fetchCandidates function when the component mounts
   }, [BallotId]); // Add ballotId to dependency array to fetch candidates when it changes
-
+  
   const handleVote = async (candidateId) => {
     try {
-      // Get token from local storage or wherever it's stored after login
-      const token = localStorage.getItem("token");
-
-      // Submit the vote with the token in the request headers
+      // Submit the vote with the extracted voterId
       await Axios.post("https://voteonclickbackend.onrender.com/vote", {
-        voterId: "voterId", // replace with actual voterId
+        voterId: voterId,
         candidateId: candidateId,
-      }, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
       });
 
       // Update votedCandidates state to mark this candidate as voted
