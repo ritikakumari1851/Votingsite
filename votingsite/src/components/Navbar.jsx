@@ -21,7 +21,7 @@ function Navbar() {
     location.pathname === "/dashboard" ||
     location.pathname === "/Ballotbox" ||
     location.pathname === "/Candidatelist" ||
-    location.pathname === "/votingbox" ||
+    location.pathname === "/Votingbox/:BallotId" ||
     location.pathname === "/Pricing"
   ) {
     return null;

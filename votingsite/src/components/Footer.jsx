@@ -26,7 +26,7 @@ export function MyFooter() {
     location.pathname === "/dashboard" ||
     location.pathname === "/Ballotbox" ||
     location.pathname === "/Candidatelist" ||
-    location.pathname === "/votingbox"||
+    location.pathname === "/Votingbox/:BallotId"||
     location.pathname === "/Auth" ||
     location.pathname === "/Pricing" 
   ) {
