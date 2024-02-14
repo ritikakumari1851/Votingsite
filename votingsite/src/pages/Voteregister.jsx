@@ -52,7 +52,7 @@ export default function Voteregister() {
         }
       });
       if (registrationSuccess) {
-        return navigate('votinglog')
+        return navigate('voterlog')
       }
   }
 
@@ -173,7 +173,7 @@ export default function Voteregister() {
           </form>
           <div className="text-sm text-center mt-[1.6rem]">
             Already have an account?{" "}
-            <Link className="text-sm text-[#7747ff]" to="/votinglogin">
+            <Link className="text-sm text-[#7747ff]" to="/Voterlog">
               Login
             </Link>
           </div>
