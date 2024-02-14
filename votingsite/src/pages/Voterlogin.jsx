@@ -15,19 +15,22 @@ export default function Voterlogin() {
       },
       body: JSON.stringify(body),
     })
-      .then(async (response) => {
-        if (response.ok) {
-          const json = await response.json();
-          console.log(json.token);
-          localStorage.setItem("userToken", json.token);
-          alert("Login successful");
-          navigation("/Auth");
-        } else {
-          // Handle non-JSON responses here
-          const text = await response.text();
-          alert(`Response was not successful: ${text}`);
-        }
-      })
+    .then(async (response) => {
+      if (response.ok) {
+        const json = await response.json();
+        const { token, voterId } = json; // Extract token and voterId from the response JSON
+        console.log(token);
+        localStorage.setItem("userToken", token);
+        localStorage.setItem("voterId", voterId); // Store the voterId in localStorage
+        alert("Login successful");
+        navigation("/Auth");
+      } else {
+        // Handle non-JSON responses here
+        const text = await response.text();
+        alert(`Response was not successful: ${text}`);
+      }
+    })
+    
       .catch((error) => alert(error));
   }
   return (

@@ -4,9 +4,7 @@ import { useParams } from "react-router-dom";
 
 const Votingbox = () => {
   const [candidates, setCandidates] = useState([]);
-  const [votedCandidates, setVotedCandidates] = useState([]);
   const { BallotId } = useParams(); // Get ballotId from URL params
-  const voterId = localStorage.getItem("voterId"); // Retrieve voterId from localStorage
 
   useEffect(() => {
     const fetchCandidates = async () => {
@@ -24,19 +22,22 @@ const Votingbox = () => {
 
     fetchCandidates(); // Call the fetchCandidates function when the component mounts
   }, [BallotId]); // Add ballotId to dependency array to fetch candidates when it changes
-  
+
   const handleVote = async (candidateId) => {
     try {
-      // Submit the vote with the extracted voterId
+      // Retrieve voterId from localStorage or wherever it's stored after login
+      const voterId = localStorage.getItem("voterId");
+
+      // Submit the vote with the extracted voterId and candidateId
       await Axios.post("https://voteonclickbackend.onrender.com/vote", {
         voterId: voterId,
         candidateId: candidateId,
       });
 
-      // Update votedCandidates state to mark this candidate as voted
-      setVotedCandidates([...votedCandidates, candidateId]);
+      // Optional: Update UI to indicate successful vote
     } catch (error) {
       console.error("Error submitting vote:", error.message);
+      // Optional: Update UI to indicate voting error
     }
   };
 
@@ -61,9 +62,8 @@ const Votingbox = () => {
               <button
                 className="bg-blue-900 p-2 px-8 rounded-lg text-white"
                 onClick={() => handleVote(candidate._id)}
-                disabled={votedCandidates.includes(candidate._id)}
               >
-                {votedCandidates.includes(candidate._id) ? "Voted" : "Vote"}
+                VOTE
               </button>
             </div>
           </li>
