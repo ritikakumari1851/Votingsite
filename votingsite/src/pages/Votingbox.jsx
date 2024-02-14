@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 const Votingbox = () => {
   const [candidates, setCandidates] = useState([]);
+  const [votedCandidate, setVotedCandidate] = useState(null); // State to track the voted candidate
   const { BallotId } = useParams(); // Get ballotId from URL params
 
   useEffect(() => {
@@ -34,6 +35,9 @@ const Votingbox = () => {
         candidateId: candidateId,
       });
 
+      // Update votedCandidate state to the selected candidate
+      setVotedCandidate(candidateId);
+
       // Optional: Update UI to indicate successful vote
     } catch (error) {
       console.error("Error submitting vote:", error.message);
@@ -59,12 +63,16 @@ const Votingbox = () => {
               <h3>DOB: {candidate.dob}</h3>
               <h3>MESSAGE: {candidate.message}</h3>
               <h3>Candidate_id: {candidate._id}</h3>
-              <button
-                className="bg-blue-900 p-2 px-8 rounded-lg text-white"
-                onClick={() => handleVote(candidate._id)}
-              >
-                VOTE
-              </button>
+              {votedCandidate === candidate._id ? (
+                <h3>Voted</h3> // Display "Voted" if the candidate is voted
+              ) : (
+                <button
+                  className="bg-blue-900 p-2 px-8 rounded-lg text-white"
+                  onClick={() => handleVote(candidate._id)}
+                >
+                  VOTE
+                </button>
+              )}
             </div>
           </li>
         ))}
