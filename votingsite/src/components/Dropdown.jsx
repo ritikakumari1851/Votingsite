@@ -13,15 +13,18 @@ export default function Dropdown() {
     const fetchUserData = async () => {
       try {
         // Replace the URL with your actual backend URL
-        const response = await fetch("https://voteonclickbackend.onrender.com/get-user", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
+        const response = await fetch(
+          "https://voteonclickbackend.onrender.com/get-user",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
 
-            // Add any headers required for authentication or other purposes
-            Authorization: localStorage.getItem("userToken"),
-          },
-        });
+              // Add any headers required for authentication or other purposes
+              Authorization: localStorage.getItem("userToken"),
+            },
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
@@ -42,7 +45,7 @@ export default function Dropdown() {
       <button
         id="dropdownAvatarNameButton"
         data-dropdown-toggle="dropdownAvatarName"
-        className="pr-6 p-3 flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:me-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white"
+        className="pr-6 p-3 flex items-center text-sm pe-1 font-medium text-gray-300 rounded-full hover:text-blue-200 dark:hover:text-blue-500 md:me-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white"
         type="button"
         onClick={toggleDropdown}
       >
