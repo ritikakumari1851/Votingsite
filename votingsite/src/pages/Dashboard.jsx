@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function Dashboard() {
   return (
     <div className="">
-      <div>
+      <div className=" border-b">
         <div className=" bg-gray-800 flex flex-row justify-between items-center ">
           <p className=" text-gray-300 font-serif text-lg font-semibold ml-4">
             Dashboard
@@ -29,37 +29,39 @@ export default function Dashboard() {
 
         <div className=" mt-1">
           <div className=" flex flex-row gap-2">
-            <button className=" px-12 py-2 bg-cyan-200 ml-1">
-              <img src={img2} className=" size-2/4 ml-14" />
+            <button className=" px-10 py-2 mb-16 bg-cyan-200 ml-1 ">
+              <img src={img2} className=" size-1/2 ml-14" />
               <Link to={"/Candidatelist"}>Candidates</Link>
             </button>
 
             <Link to={"/Ballotbox"}>
-              <button className=" px-20 py-16 bg-orange-300">
+              <button className=" px-20 py-16 mb-16 bg-orange-300">
                 {" "}
                 <img src={img3} />
                 Ballot{""}
               </button>
             </Link>
             <Link to={"/Voterlist"}>
-              <button className=" px-20 py-16 bg-green-200">
+              <button className=" px-20 py-16 mb-16 bg-green-200">
                 {" "}
                 <img src={img4} />
                 Voters{""}
               </button>
             </Link>
             <Link to={"/Result"}>
-              <button className=" px-20 py-16 bg-gray-300">
+              <button className=" px-20 py-16 mb-10 bg-gray-300">
                 {" "}
                 <img src={img5} />
                 Results{""}
               </button>
             </Link>
           </div>
-          <p className=" text-center font-serif text-4xl mt-10 text-gray-900">
-            Our most recent Candidate
-          </p>
-          <div className=" flex flex-row justify-between mt-10 mx-20">
+          <div className="">
+            <p className=" text-center font-serif text-4xl text-gray-900 mb-12 mt-[-20px]">
+              Our most recent Candidate
+            </p>
+          </div>
+          <div className=" flex flex-row justify-between mt-10 mx-2">
             <Card1 />
             <Card1 />
             <Card1 />

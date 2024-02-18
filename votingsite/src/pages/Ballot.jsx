@@ -13,7 +13,7 @@ export default function Ballot() {
   return (
     <div className="  ">
       <div>
-        <p className="p-4 bg-gray-900 text-xl font-serif shadow-2xl ">
+        <p className="p-4 bg-gray-800 text-xl font-serif shadow-2xl border-b text-white  ">
           {" "}
           Ballot
         </p>
@@ -26,30 +26,26 @@ export default function Ballot() {
           <img src={img3} className=" w-full h-40 mb-3" />
 
           <div className="flex flex-row gap-2">
-            <button className="px-20 py-16 bg-cyan-900 ml-2">
+            <button className="px-20 py-16 bg-purple-300 ml-2">
               <img src={img4} /> See Ballot
             </button>
-            <button className="px-20 py-16 bg-orange-300">
+            <button className="px-20 py-16 bg-purple-500">
               <img src={img5} /> Edit Ballot
             </button>
-            <button className="px-20 py-16 bg-green-400">
+            <button className="px-20 py-16 bg-purple-700">
               <img src={img6} /> See Candidates
             </button>
-            <button className="px-20 py-16 bg-gray-600">
+            <button className="px-20 py-16 bg-purple-200">
               <img src={img7} /> Edit Candidates
             </button>
           </div>
           <div className="flex mt-[10vh] justify-between">
             <img src={img1} className="size-32" />
-            <div className=" flex flex-col gap-2">
-              
-               <button
-                className="py-8 mb-2 bg-green-900 px-32 rounded-md flex text-gray-200 font-serif text-2xl items-center"
-                
-              >
-                <Link to={"/ballotbox"}>
-                Create new Ballot
-                </Link>
+            <div className=" flex flex-col gap-2 ">
+              <button class=" w-80 h-20 bg-white cursor-pointer rounded-3xl border-2 border-[#9748FF] shadow-[inset_0px_-2px_0px_1px_#9748FF] group hover:bg-[#9748FF] transition duration-300 ease-in-out ">
+                <span class=" font-medium text-[#333] group-hover:text-white text-nowrap">
+                  <Link to={"/ballotbox"}>Create new Ballot</Link>
+                </span>
               </button>
             </div>
             <img src={img2} className="size-32" />

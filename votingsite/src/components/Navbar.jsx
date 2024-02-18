@@ -22,7 +22,9 @@ function Navbar() {
     location.pathname === "/Ballotbox" ||
     location.pathname === "/Candidatelist" ||
     location.pathname === "/Votingbox/:BallotId"||
-    location.pathname === "/Pricing"
+    location.pathname === "/Pricing"||
+    location.pathname === "/Editcandidate"
+
   ) {
     return null;
   }

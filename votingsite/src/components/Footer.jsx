@@ -26,9 +26,10 @@ export function MyFooter() {
     location.pathname === "/dashboard" ||
     location.pathname === "/Ballotbox" ||
     location.pathname === "/Candidatelist" ||
-    location.pathname === "/Votingbox/:BallotId"||
+    location.pathname === "/Votingbox/:BallotId" ||
     location.pathname === "/Auth" ||
-    location.pathname === "/Pricing" 
+    location.pathname === "/Pricing" ||
+    location.pathname === "/Editcandidate"
   ) {
     return null;
   }
