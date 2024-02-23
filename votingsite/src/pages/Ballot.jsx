@@ -27,16 +27,18 @@ export default function Ballot() {
 
           <div className="flex flex-row gap-2">
             <button className="px-20 py-16 bg-purple-300 ml-2">
-              <img src={img4} /> See Ballot
+              <img src={img4} /> <Link to={"/Votingbox/:BallotId"}>See Ballot</Link>
             </button>
             <button className="px-20 py-16 bg-purple-500">
-              <img src={img5} /> Edit Ballot
+              <img src={img5} /> <Link to={"/ballotbox"}>Edit Ballot</Link>
             </button>
             <button className="px-20 py-16 bg-purple-700">
-              <img src={img6} /> See Candidates
+              <img src={img6} />
+              <Link to={"/Candidatelist"}> See Candidates</Link>
             </button>
             <button className="px-20 py-16 bg-purple-200">
-              <img src={img7} /> Edit Candidates
+              <img src={img7} />
+              <Link to={"/Editcandidate"}> Edit Candidates</Link>
             </button>
           </div>
           <div className="flex mt-[10vh] justify-between">

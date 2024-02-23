@@ -27,6 +27,9 @@ const Candidatelist = () => {
 
   return (
     <div>
+      <button className=" bg-gray-900 rounded-full p-2 float-right mr-4 px-4 text-white">
+        <Link to={"/dashboard"}> Dashboard</Link>
+      </button>
       <form onSubmit={handleSubmit} className=" mt-5 ml-2">
         <div className=" flex flex-col">
           <div className="">
@@ -63,7 +66,8 @@ const Candidatelist = () => {
                   &nbsp;&nbsp;&nbsp;<b> Position:</b> {candidate.position}{" "}
                   &nbsp;&nbsp;&nbsp;<b> About:</b> {candidate.about}{" "}
                   &nbsp;&nbsp;&nbsp;
-                  <b>DOB:</b> {candidate.dob} &nbsp;&nbsp;&nbsp;<b> Message:</b>{" "}
+                  <b>
+                  {new Date(candidate.dob).toLocaleDateString()}DOB:</b> {candidate.dob} &nbsp;&nbsp;&nbsp;<b> Message:</b>{" "}
                   {candidate.message}
                   <b> &nbsp;&nbsp;&nbsp; BallotID:</b> {candidate.BallotId}
                 </div>
@@ -72,7 +76,7 @@ const Candidatelist = () => {
           </ul>
 
           <button class=" ml-[100vh] mt-10 w-[150px] bg-black h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
-           <Link to={'/Editcandidate'}> Edit Candidate</Link>
+            <Link to={"/Editcandidate"}> Edit Candidate</Link>
           </button>
         </div>
       )}

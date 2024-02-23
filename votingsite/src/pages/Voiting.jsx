@@ -5,12 +5,13 @@ import img2 from "../assets/checklist.png";
 import img3 from "../assets/cv (2).png";
 import img4 from "../assets/politics.png";
 import img5 from "../assets/voter.png";
+import { Link } from "react-router-dom";
 export default function Voiting() {
   return (
     <div>
       <div className=" text-black font-serif text-xl">
         <div>
-          <p className="p-4 bg-gray-200 text-xl font-serif shadow-2xl">
+          <p className="p-4 bg-gray-800 text-xl font-serif shadow-2xl text-white">
             Voting
           </p>
         </div>
@@ -23,21 +24,30 @@ export default function Voiting() {
             <p>No. of Candidates</p>
             <button className=" px-28 py-8 bg-cyan-900">
               <img src={img2} className=" w-10 h-10" />
-              Candidates
+              <Link to={"/Candidatelist"}>Candidates</Link>
             </button>
-            <p>No. of Voters</p>
+            <p>
+              {" "}
+              <Link to={"/Voterslist"}>No. of Voters</Link>
+            </p>
             <button className=" px-32 py-8 bg-orange-300">
               <img src={img3} className=" w-10 h-10" />
-              Voters
+              <Link to={"/Voterslist"}> Voters</Link>
             </button>
-            <p>Analyse Result</p>
+            <p>
+              {" "}
+              <Link to={"/Result"}>Analyse Result</Link>
+            </p>
             <button className=" px-32 py-8 bg-green-400">
               <img src={img4} className=" w-10 h-10" /> Results
             </button>
-            <p>Edit voters</p>
+            <p>
+              {" "}
+              <Link to={"/Editvoter"}>Edit voters</Link>
+            </p>
             <button className=" px-36 py-8 bg-gray-600">
               <img src={img5} className=" w-10 h-10" />
-              Edit
+              <Link to={"/Editvoter"}> Edit</Link>
             </button>
           </div>
           <div className=" flex flex-col">

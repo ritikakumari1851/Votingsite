@@ -47,24 +47,24 @@ const Votingbox = () => {
 
   return (
     <div className="bg-blue-200">
-      <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
+      <h2 className="text-4xl font-serif text-center text-blue-950 mb-5 pt-10">
         Ballot ID: {BallotId}
       </h2>
-      <h2 className="text-4xl font-serif text-center text-blue-800 mb-5">
+      <h2 className="text-4xl font-serif text-center text-blue-950 mb-5">
         Welcome To the BallotBox
       </h2>
       <ul>
         {candidates.map((candidate) => (
           <li key={candidate._id} className="flex justify-between">
-            <div className="flex gap-10 mb-2 mt-2 bg-green-400 p-4">
+            <div className="flex gap-8 mt-2 bg-green-400 p-4">
               <h3>NAME: {candidate.full_name}</h3>
               <h3>POSITION: {candidate.position}</h3>
               <h3>ABOUT: {candidate.about}</h3>
-              <h3>DOB: {candidate.dob}</h3>
+              <h3>DOB: {new Date(candidate.dob).toLocaleDateString()}</h3>
               <h3>MESSAGE: {candidate.message}</h3>
               <h3>Candidate_id: {candidate._id}</h3>
               {votedCandidate === candidate._id ? (
-                <h3>Voted</h3> // Display "Voted" if the candidate is voted
+                <h3>Voted</h3>
               ) : (
                 <button
                   className="bg-blue-900 p-2 px-8 rounded-lg text-white"
