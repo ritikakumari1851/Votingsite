@@ -40,11 +40,6 @@ const Result = () => {
           <li key={candidate._id} className="flex justify-between">
             <div className="flex gap-8 mt-2 bg-green-400 p-4">
               <h3>NAME: {candidate.full_name}</h3>
-              <h3>POSITION: {candidate.position}</h3>
-              <h3>ABOUT: {candidate.about}</h3>
-              <h3>DOB: {new Date(candidate.dob).toLocaleDateString()}</h3>
-              <h3>MESSAGE: {candidate.message}</h3>
-              <h3>Candidate_id: {candidate._id}</h3>
               <h3>Total Votes: {candidate.totalVotes}</h3> {/* Display total number of votes */}
             </div>
           </li>
