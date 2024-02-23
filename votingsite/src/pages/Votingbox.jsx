@@ -28,23 +28,30 @@ const Votingbox = () => {
     try {
       // Retrieve voterId from localStorage or wherever it's stored after login
       const voterId = localStorage.getItem("voterId");
-
+  
       // Submit the vote with the extracted voterId and candidateId
       await Axios.post("https://voteonclickbackend.onrender.com/vote", {
         voterId: voterId,
         candidateId: candidateId,
       });
-
+  
       // Update votedCandidate state to the selected candidate
       setVotedCandidate(candidateId);
-
+  
       // Optional: Update UI to indicate successful vote
     } catch (error) {
-      console.error("Error submitting vote:", error.message);
-      // Optional: Update UI to indicate voting error
+      if (error.response && error.response.status === 400 && error.response.data.message === "Voter already voted") {
+        // Display an alert if the voter has already voted
+        alert("You have already voted."); // Display alert
+      } else {
+        console.error("Error submitting vote:", error.message);
+        console.log("Response data:", error.response.data); // Log the response data
+        // Optional: Update UI to indicate voting error
+      }
     }
   };
-
+  
+  
   return (
     <div className="bg-blue-200">
       <h2 className="text-4xl font-serif text-center text-blue-950 mb-5 pt-10">
