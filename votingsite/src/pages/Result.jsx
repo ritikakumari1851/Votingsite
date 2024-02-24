@@ -1,55 +1,46 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
+// ResultPage.js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const CandidateList = () => {
+const Result = () => {
   const [candidates, setCandidates] = useState([]);
-  const [ballotId, setBallotId] = useState("");
-
-  const fetchCandidatesWithTotalVotes = async () => {
-    try {
-      const response = await Axios.get(`/candidates-with-total-votes?BallotId=${ballotId}`);
-      console.log("Response:", response.data);
-      setCandidates(response.data);
-    } catch (error) {
-      console.error("Error fetching candidates:", error.message);
-    }
-  };
+  const [totalVotes, setTotalVotes] = useState(0);
 
   useEffect(() => {
-    if (ballotId) {
-      fetchCandidatesWithTotalVotes();
-    }
-  }, [ballotId]);
-
-  const handleInputChange = (e) => {
-    setBallotId(e.target.value);
-  };
+    const fetchResult = async () => {
+      try {
+        const response = await axios.get('/api/result/yourBallotId');
+        setCandidates(response.data.candidates);
+        setTotalVotes(response.data.totalVotes);
+      } catch (error) {
+        console.error('Error fetching result:', error);
+      }
+    };
+    fetchResult();
+  }, []);
 
   return (
     <div>
-      <h1>Candidates with Total Votes</h1>
-      <div>
-        <label htmlFor="ballotId">Enter Ballot ID: </label>
-        <input
-          type="text"
-          id="ballotId"
-          value={ballotId}
-          onChange={handleInputChange}
-        />
-        <button onClick={fetchCandidatesWithTotalVotes}>Get Result</button>
-      </div>
-      <ul>
-        {candidates.map((candidate) => (
-          <li key={candidate._id}>
-            <h3>Name: {candidate.full_name}</h3>
-            <p>Position: {candidate.position}</p>
-            <p>About: {candidate.about}</p>
-            <p>Total Votes: {candidate.totalVotes}</p>
-          </li>
-        ))}
-      </ul>
+      <h1>Voting Result</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Candidate Name</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {candidates.map(candidate => (
+            <tr key={candidate._id}>
+              <td>{candidate.full_name}</td>
+              <td>{candidate.votes}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p>Total Votes: {totalVotes}</p>
     </div>
   );
 };
 
-export default CandidateList;
+export default Result;
