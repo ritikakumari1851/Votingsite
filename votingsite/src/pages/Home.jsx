@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "../components/Slider";
-import Card from "../components/Card";
 import img1 from "../assets/Good team-pana.png";
 import img3 from "../assets/03c5e1f41a08f714c252b6763457b843f8b8bc31-731x731.png";
 import img4 from "../assets/decision.png";
