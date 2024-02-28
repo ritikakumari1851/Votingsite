@@ -21,16 +21,16 @@ function Navbar() {
     location.pathname === "/dashboard" ||
     location.pathname === "/Ballotbox" ||
     location.pathname === "/Candidatelist" ||
-    location.pathname.startsWith("/Votingbox/")||
-    location.pathname === "/Pricing"||
-    location.pathname === "/Result"||
+    location.pathname.startsWith("/Votingbox/") ||
+    location.pathname === "/Pricing" ||
+    location.pathname === "/Result" ||
     location.pathname === "/Editcandidate"
   ) {
     return null;
   }
   return (
     <div>
-      <nav className=" shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
+      <nav className=" bg-white shadow-xl fixed z-50 block top-0 overflow-hidden float-left w-[100%]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">

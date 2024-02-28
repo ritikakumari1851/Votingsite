@@ -19,7 +19,7 @@ const Candidatelist = () => {
         `https://voteonclickbackend.onrender.com/result/${ballotId}`
       );
       console.log("Response:", response.data);
-      setCandidates(response.data.result);
+      setCandidates(response.data.candidates); // Corrected to access candidates key
     } catch (error) {
       console.error("Error fetching candidates:", error.message);
     }
@@ -27,24 +27,24 @@ const Candidatelist = () => {
 
   return (
     <div>
-      <button className=" bg-gray-900 rounded-full p-2 float-right mr-4 px-4 text-white">
+      <button className="bg-gray-900 rounded-full p-2 float-right mr-4 px-4 text-white">
         <Link to={"/dashboard"}> Dashboard</Link>
       </button>
-      <form onSubmit={handleSubmit} className=" mt-5 ml-2">
-        <div className=" flex flex-col">
+      <form onSubmit={handleSubmit} className="mt-5 ml-2">
+        <div className="flex flex-col">
           <div className="">
             <input
               type="text"
               value={ballotId}
               onChange={handleInputChange}
-              placeholder=" Enter Ballot ID:"
-              className=" rounded-full"
+              placeholder="Enter Ballot ID:"
+              className="rounded-full"
             />
           </div>
           <div className="ml-[10vh] mt-2">
             <button
               type="submit"
-              className=" bg-gray-800 p-2 px-4 text-base text-gray-200 hover:bg-gray-900 rounded-full"
+              className="bg-gray-800 p-2 px-4 text-base text-gray-200 hover:bg-gray-900 rounded-full"
             >
               Submit
             </button>
@@ -53,14 +53,14 @@ const Candidatelist = () => {
       </form>
       {candidates.length > 0 && (
         <div>
-          <h2 className=" text-4xl text-center font-serif mb-10">
+          <h2 className="text-4xl text-center font-serif mb-10">
             Candidate List
           </h2>
           <ul>
             {candidates.map((candidate) => (
-              <li key={candidate.id}>
-                <div className=" bg-purple-300 mb-4 p-4">
-                  <b className=" text-lg">Candidate ID:</b> {candidate.id}{" "}
+              <li key={candidate._id}>
+                <div className="bg-purple-300 mb-4 p-4">
+                  <b className="text-lg">Candidate ID:</b> {candidate._id}{" "}
                   &nbsp;&nbsp;&nbsp;<b>Name:</b> {candidate.name}{" "}
                   &nbsp;&nbsp;&nbsp;<b>Total Votes:</b> {candidate.totalVotes}
                 </div>
