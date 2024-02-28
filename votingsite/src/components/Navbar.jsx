@@ -24,7 +24,8 @@ function Navbar() {
     location.pathname.startsWith("/Votingbox/") ||
     location.pathname === "/Pricing" ||
     location.pathname === "/Result" ||
-    location.pathname === "/Editcandidate"
+    location.pathname === "/Editcandidate" ||
+    location.pathname === "/voterlist"
   ) {
     return null;
   }
@@ -46,15 +47,15 @@ function Navbar() {
                     <Link to={"/"}>Home</Link>
                   </p>
 
-                  <p className=" hover:border-b-2 hover:border-b-blue-950 text-gray-500 font-serif   text-md">
+                  <p className=" hover:border-b-2 hover:text-blue-950 hover:border-b-blue-950 text-gray-500 font-serif   text-md">
                     <Link to={"Election"}>Election</Link>
                   </p>
 
-                  <p className="hover:border-b-2 hover:border-b-blue-950 text-gray-500 font-serif   text-md">
+                  <p className="hover:border-b-2 hover:text-blue-950 hover:border-b-blue-950 text-gray-500 font-serif   text-md">
                     <Link to={"Services"}>Services</Link>
                   </p>
 
-                  <p className="hover:border-b-2 hover:border-b-blue-950 text-gray-500 font-serif   text-md ">
+                  <p className="hover:border-b-2 hover:text-blue-950 hover:border-b-blue-950 text-gray-500 font-serif   text-md ">
                     <Link to={"Contact"}>Contact</Link>
                   </p>
                   {/* 

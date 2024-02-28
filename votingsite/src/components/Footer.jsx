@@ -30,7 +30,8 @@ export function MyFooter() {
     location.pathname === "/Auth" ||
     location.pathname === "/Result"||
     location.pathname === "/Pricing" ||
-    location.pathname === "/Editcandidate"
+    location.pathname === "/Editcandidate"||
+    location.pathname === "/voterlist"
   ) {
     return null;
   }

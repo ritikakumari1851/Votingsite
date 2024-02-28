@@ -25,7 +25,7 @@ export default function Login() {
         } else {
           // Handle non-JSON responses here
           const text = await response.text();
-          alert(`Response was not successful:`);
+          alert(`Response was not successful: ${text}`);
         }
       })
       .catch((error) => alert(error));
