@@ -93,7 +93,7 @@ const Votingbox = () => {
               <h3>MESSAGE: {candidate.message}</h3>
               <h3>Candidate_id: {candidate._id}</h3>
               {votedCandidate === candidate._id ? (
-                <h3>Voted</h3>
+                <h3 className=" bg-slate-800 text-slate-100">Voted</h3>
               ) : (
                 <button
                   className="bg-blue-900 p-2 px-8 rounded-lg text-white"
