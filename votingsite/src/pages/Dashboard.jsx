@@ -58,12 +58,23 @@ export default function Dashboard() {
           </div>
           <div className="">
             <p className=" text-center font-serif text-4xl text-gray-900 mb-12 mt-[-20px]">
-            Analysis
+              Analysis
             </p>
           </div>
-         <div>
-          hyg
-         </div>
+          <div className=" bg-gray-400 w-full h-[40vh]">
+            <div>
+              hello
+            </div>
+            <div>
+              hello
+            </div>
+            <div>
+              hello
+            </div>
+            <div>
+              hello
+            </div>
+          </div>
         </div>
       </div>
     </div>
