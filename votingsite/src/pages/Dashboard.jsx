@@ -61,19 +61,11 @@ export default function Dashboard() {
               Analysis
             </p>
           </div>
-          <div className=" bg-gray-400 w-full h-[40vh]">
-            <div>
-              hello
-            </div>
-            <div>
-              hello
-            </div>
-            <div>
-              hello
-            </div>
-            <div>
-              hello
-            </div>
+          <div className=" bg-gray-400 w-full h-[30vh] flex justify-between">
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
           </div>
         </div>
       </div>
