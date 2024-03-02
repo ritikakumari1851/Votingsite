@@ -71,19 +71,19 @@ export default function Dashboard() {
           <div className="bg-white w-4/5 h-1/2 rounded-xl mt-10 relative">
         <div className="flex">
           <div className="relative w-1/2">
-            <img src={img1} className="w-full" alt="Image 1" />
+            <img src={img6} className="w-full" alt="Image 1" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
               Insititues
             </button>
           </div>
           <div className="relative w-1/2">
-            <img src={img3} className="w-full" alt="Image 2" />
+            <img src={img7} className="w-full" alt="Image 2" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
               NGO
             </button>
           </div>
           <div className="relative w-1/2">
-            <img src={img5} className="w-full" alt="Image 2" />
+            <img src={img8} className="w-full" alt="Image 2" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
               School
             </button>
@@ -91,19 +91,19 @@ export default function Dashboard() {
         </div>
         <div className="flex">
           <div className="relative w-1/2">
-            <img src={img6} className="w-full" alt="Image 3" />
+            <img src={img9} className="w-full" alt="Image 3" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
               Colleges
             </button>
           </div>
           <div className="relative w-1/2">
-            <img src={img4} className="w-full" alt="Image 2" />
+            <img src={img10} className="w-full" alt="Image 2" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
               Companies
             </button>
           </div>
           <div className="relative w-1/2">
-            <img src={img2} className="w-full" alt="Image 4" />
+            <img src={img11} className="w-full" alt="Image 4" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
               Studios
             </button>
