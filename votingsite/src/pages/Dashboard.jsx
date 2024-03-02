@@ -61,27 +61,23 @@ export default function Dashboard() {
               Analysis
             </p>
           </div>
-          <div className=" bg-gray-400 w-full h-[30vh] flex justify-between mx-10 shadow-xl ">
+          <div className=" w-full h-[30vh] flex justify-between mx-10 shadow-xl ">
             <div>
-              <p>
-              hello</p>
-              <img src={img1}/>
-              </div>
-              <div>
-              <p>
-              hello</p>
-              <img src={img1}/>
-              </div>
+              <p>hello</p>
+              <img src={img1} />
+            </div>
             <div>
-              <p>
-              hello</p>
-              <img src={img1}/>
-              </div>
+              <p>hello</p>
+              <img src={img1} />
+            </div>
             <div>
-              <p>
-              hello</p>
-              <img src={img1}/>
-              </div>
+              <p>hello</p>
+              <img src={img1} />
+            </div>
+            <div>
+              <p>hello</p>
+              <img src={img1} />
+            </div>
           </div>
         </div>
       </div>
