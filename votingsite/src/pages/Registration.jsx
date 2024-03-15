@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 export default function Registration() {
   const [full_name, setfull_name] = useState();
@@ -8,7 +8,7 @@ export default function Registration() {
   const [Dob, setDob] = useState();
   const [gender, setGender] = useState();
   const [password, setpassword] = useState();
-
+  const navigation = useNavigate();
   function handleRegister(e) {
     e.preventDefault();
     const body = { full_name, email, username, Dob, gender, password };
@@ -20,8 +20,9 @@ export default function Registration() {
       body: JSON.stringify(body),
     })
       .then((response) => {
-        if (response.status == 200) {
-          return response.json();
+        if (response.status === 200) {
+          alert("Registration successful");
+          navigation("/Login");
         } else {
           return response.json();
         }
