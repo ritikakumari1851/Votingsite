@@ -69,7 +69,7 @@ export default function Dashboard() {
                 View
               </p>
               <p className=" text-center font-serif text-sm">Votes</p>
-              <img src={img2} className=" h-[12vh] w-[12vh] mr-10 ml-8" />
+              <img src={img2} className=" h-[12vh] w-[12vh] mr-10 ml-8"/>
             </Link></div>
          
           </div>

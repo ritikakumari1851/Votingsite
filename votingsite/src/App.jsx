@@ -42,7 +42,6 @@ function App() {
   }, []);
   return (
     <>
-
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -69,8 +68,7 @@ function App() {
           {loggedIn && <Route path="/Auth" element={<Auth/>} />}
           {loggedIn && <Route path="/dashboard" element={<Dashboard />} />}
         </Routes>
-        <MyFooter />
-     
+        <MyFooter/>
     </>
   );
 }
