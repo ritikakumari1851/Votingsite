@@ -67,7 +67,7 @@ const Candidatelist = () => {
                   &nbsp;&nbsp;&nbsp;<b> About:</b> {candidate.about}{" "}
                   &nbsp;&nbsp;&nbsp;
                   <b>
-                  {new Date(candidate.dob).toLocaleDateString()}DOB:</b> {candidate.dob} &nbsp;&nbsp;&nbsp;<b> Message:</b>{" "}
+                  DOB:{new Date(candidate.dob).toLocaleDateString()}</b><b> Message:</b>{" "}
                   {candidate.message}
                   <b> &nbsp;&nbsp;&nbsp; BallotID:</b> {candidate.BallotId}
                 </div>
