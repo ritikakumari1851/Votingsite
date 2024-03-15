@@ -58,19 +58,19 @@ export default function Home() {
           <div className="relative w-1/2">
             <img src={img1} className="w-full" alt="Image 1" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
-              Insititues
+            <Link to={"/registration"}>Insititues</Link>
             </button>
           </div>
           <div className="relative w-1/2">
             <img src={img3} className="w-full" alt="Image 2" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
-              NGO
+            <Link to={"/registration"}>NGO</Link>
             </button>
           </div>
           <div className="relative w-1/2">
             <img src={img5} className="w-full" alt="Image 2" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
-              School
+            <Link to={"/registration"}>School</Link>
             </button>
           </div>
         </div>
@@ -78,19 +78,19 @@ export default function Home() {
           <div className="relative w-1/2">
             <img src={img6} className="w-full" alt="Image 3" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
-              Colleges
+            <Link to={"/registration"}>Colleges</Link>
             </button>
           </div>
           <div className="relative w-1/2">
             <img src={img4} className="w-full" alt="Image 2" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
-              Companies
+            <Link to={"/registration"}>Companies</Link>
             </button>
           </div>
           <div className="relative w-1/2">
             <img src={img2} className="w-full" alt="Image 4" />
             <button className="animate-bounce-slow bg-orange-600 p-2 font-serif text-lg text-white hover:bg-gray-900 rounded-md absolute bottom-0 left-32 mb-2">
-              Studios
+            <Link to={"/registration"}>Studios</Link>
             </button>
           </div>
         </div>
