@@ -41,6 +41,7 @@ export default function Voteregister() {
       .then((json) => {
         alert(json.message);
         // Redirect to login page after successful registration
+        navigate("/Voterlog")
       })
       .catch((error) => {
         if (error.response) {
