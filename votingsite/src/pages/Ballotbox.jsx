@@ -14,7 +14,7 @@ const Ballotbox = () => {
   const [BallotId, setBallotId] = useState("");
 
   const addCandidate = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     Axios.post("https://voteonclickbackend.onrender.com/candidate", {
       full_name: full_name,
       Name: Name,
