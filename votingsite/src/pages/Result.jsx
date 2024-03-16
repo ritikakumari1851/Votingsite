@@ -19,7 +19,7 @@ const Candidatelist = () => {
         `https://voteonclickbackend.onrender.com/result/${ballotId}`
       );
       console.log("Response:", response.data);
-      setCandidates(response.data.candidates); // Corrected to access candidates key
+      setCandidates(response.data.candidate); // Corrected to access candidates key
     } catch (error) {
       console.error("Error fetching candidates:", error.message);
     }
